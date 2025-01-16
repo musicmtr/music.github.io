@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    transition: background-color 1s ease;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 3rem; /* Размер заголовка по умолчанию */
+  }
+  
+  p {
+    font-size: 1.5rem; /* Размер текста по умолчанию */
+  }
+  
+  /* Для экранов шириной меньше 768px (планшеты) */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem; /* Уменьшить размер заголовка */
+    }
+    p {
+      font-size: 1.2rem; /* Уменьшить размер текста */
+    }
+  }
+  
+  /* Для экранов шириной меньше 480px (мобильные устройства) */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem; /* Еще меньше для мобильных */
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  #section1 {
+    background: url('https://source.unsplash.com/1600x900/?wedding') no-repeat center center/cover;
+  }
+  
+  #section2 {
+    background: url('https://source.unsplash.com/1600x900/?love') no-repeat center center/cover;
+  }
+  
+  #section3 {
+    background: url('https://source.unsplash.com/1600x900/?celebration') no-repeat center center/cover;
+  }
