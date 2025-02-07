@@ -11,13 +11,81 @@ body {
   text-align: center;
 }
 
-/* Общий стиль для основного текста */
+/* шрифты */
+.cormorant-garamond-light {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-medium {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-garamond-light-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cormorant-garamond-regular-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cormorant-garamond-medium-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cormorant-garamond-semibold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cormorant-garamond-bold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poiret-one-regular {
+  font-family: "Poiret One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Основной текст */
 p {
-  font-family: "Marck Script";
-  font-size: 22px; /* Увеличиваем размер текста */
-  line-height: 1.4; /* Сокращаем межстрочный интервал */
-  margin-bottom: 15px; /* Добавляем небольшой отступ */
-  color: #333; /* Цвет текста */
+  font-family: "Cormorant Garamond", serif; /* Используем Cormorant Garamond */
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  color: #333;
 }
 
 /* Контейнер для основного текста */
@@ -27,10 +95,18 @@ p {
   text-align: justify; /* Выравниваем текст по ширине */
 }
 
-/* Акцентный цвет */
-p strong, .timer {
-  color: #a47864; /* Акцентный цвет */
-  font-size: inherit; /* Размер шрифта остаётся таким же */
+/* Акцентные слова */
+strong {
+  font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
+  color: #a47864;
+}
+
+/* Текстовое поле для даты */
+.date-container p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700; /* Жирный стиль */
+  font-size: 24px;
+  color: #333;
 }
 
 /* Таймер */
@@ -43,11 +119,17 @@ p strong, .timer {
 }
 
 #countdown span {
-  display: block; /* Каждая строка на новой строке */
-  font-size: 30px; /* Меньший размер для текста */
-  font-weight: normal; /* Обычный стиль для текста */
-  color: #333; /* Цвет текста */
-  margin-bottom: 5px; /* Отступ между строками */
+  font-family: "Cormorant Garamond", serif; /* Cormorant Garamond для текста */
+  font-size: 24px;
+  font-weight: normal;
+  color: #333;
+}
+
+#countdown strong {
+  font-family: "Cormorant Garamond", serif; /* Cormorant Garamond для времени */
+  font-weight: 700;
+  font-size: 26px;
+  color: #a47864;
 }
 
 /* Контейнер */
@@ -60,15 +142,14 @@ p strong, .timer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Заголовки с шрифтом Marck Script */
-/* Объёмный текст с тенью */
+/* Заголовки */
 h1, h2 {
-  font-family: "Marck Script", cursive;
+  font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
   color: #a47864;
   font-size: 36px;
   text-shadow: 
-      2px 2px 5px rgba(0, 0, 0, 0.2), /* Тень позади текста */
-      -1px -1px 5px rgba(255, 255, 255, 0.5); /* Светлый контур */
+    2px 2px 5px rgba(0, 0, 0, 0.2),
+    -1px -1px 5px rgba(255, 255, 255, 0.5);
 }
 
 /* Кнопки с шрифтом Marck Script */
