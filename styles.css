@@ -111,26 +111,30 @@ strong {
 }
 
 /* Таймер */
-#countdown {
-  font-size: 26px; /* Размер шрифта */
+.timer {
+  font-size: 26px;
   font-weight: bold;
-  color: #a47864; /* Цвет текста */
+  color: #a47864; /* Акцентный цвет */
   text-align: center;
   margin: 10px 0 20px;
 }
 
+/* Текст "До свадьбы осталось:" */
 #countdown span {
-  font-family: "Cormorant Garamond", serif; /* Cormorant Garamond для текста */
-  font-size: 24px;
-  font-weight: normal;
-  color: #333;
+  display: block; /* Каждая строка на новой строке */
+  font-family: "Cormorant Garamond", serif; /* Шрифт Cormorant Garamond */
+  font-size: 24px; /* Размер шрифта */
+  font-weight: normal; /* Обычный стиль */
+  color: #333; /* Цвет текста */
+  margin-bottom: 5px; /* Отступ между строками */
 }
 
+/* Время таймера */
 #countdown strong {
-  font-family: "Cormorant Garamond", serif; /* Cormorant Garamond для времени */
-  font-weight: 700;
-  font-size: 26px;
-  color: #a47864;
+  font-family: "Cormorant Garamond", serif; /* Шрифт Cormorant Garamond */
+  font-size: 26px; /* Размер шрифта */
+  font-weight: 700; /* Жирный стиль */
+  color: #a47864; /* Акцентный цвет */
 }
 
 /* Контейнер */
