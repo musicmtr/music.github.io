@@ -1,16 +1,29 @@
 /* Основные стили */
-body { 
-  font-family: 'Marck Script', cursive; 
-  background-image: url('images/fon.jpg'); /* Фоновое изображение */
-  background-size: cover; /* Растягиваем на весь экран */
-  background-position: center; /* Центрируем */
-  background-attachment: fixed; /* Фиксируем фон */
-  color: #333; 
-  margin: 0; 
-  padding: 0; 
-  line-height: 1.6; 
-  text-align: center; /* Центрирование всего текста */
-} 
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('images/fon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333; /* Цвет текста */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Общий стиль для основного текста */
+p {
+  font-size: 18px; /* Увеличиваем размер текста */
+  line-height: 1.4; /* Сокращаем межстрочный интервал для более компактного отображения */
+  margin-bottom: 15px; /* Добавляем небольшой отступ между абзацами */
+  color: #333; /* Цвет текста для всех элементов, кроме акцентных */
+}
+
+/* Исключаем текст с цветом #b76e79 из изменений */
+p strong, .timer {
+  color: #b76e79; /* Оставляем акцентный цвет без изменений */
+  font-size: inherit; /* Размер шрифта останется таким же, как у родителя */
+}
 
 #countdown {
   font-size: 28px;
@@ -20,14 +33,15 @@ body {
   color: #b76e79;
 }
 
-/* Контейнер для контента */
-.container { 
-  max-width: 800px; 
-  margin: 50px auto; /* Центрируем и добавляем отступ сверху */
-  padding: 20px; 
-  background: rgba(255, 255, 255, 0.8); /* Светлый прозрачный фон */
-  border-radius: 10px; /* Скругление углов */
-} 
+/* Добавляем более прозрачный фон для контейнера и тень */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Более светлый и прозрачный фон */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
 
 h1, h2 { 
   font-family: 'Great Vibes', cursive; 
