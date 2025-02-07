@@ -39,32 +39,37 @@ document.addEventListener('DOMContentLoaded', () => {
       appearOnScroll.observe(fadeIn);
   });
 
-  // Отслеживаем видимость элементов
-document.addEventListener('DOMContentLoaded', () => {
-  const fadeElements = document.querySelectorAll('.fade-in'); // Все элементы с классом .fade-in
+  document.addEventListener('DOMContentLoaded', () => {
+    const fadeElements = document.querySelectorAll('.fade-in'); // Все элементы с классом .fade-in
 
-  const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              // Если элемент виден, показываем его
-              entry.target.classList.add('visible');
-              entry.target.classList.remove('fade-out');
-          } else {
-              // Если элемент выходит за пределы экрана, скрываем его
-              const rect = entry.boundingClientRect;
-              if (rect.top < 0) {
-                  entry.target.classList.add('fade-out');
-              } else {
-                  entry.target.classList.remove('fade-out');
-              }
-          }
-      });
-  }, { threshold: [0, 1] }); // Отслеживаем полную видимость
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Если элемент виден, показываем его
+                entry.target.style.opacity = '1'; // Полная видимость
+                entry.target.style.transform = 'translateY(0)'; // Возвращаем на место
+                entry.target.classList.add('visible');
+            } else {
+                // Рассчитываем степень видимости
+                const rect = entry.boundingClientRect;
+                const topPosition = rect.top; // Расстояние от верха экрана до элемента
+                const screenHeight = window.innerHeight; // Высота экрана
 
-  // Наблюдаем за каждым элементом
-  fadeElements.forEach(element => {
-      observer.observe(element);
-  });
+                // Начинаем скрывать элемент, когда он находится выше определённой точки
+                if (topPosition < screenHeight * 0.8) { // 80% высоты экрана
+                    const visibilityFactor = (screenHeight - topPosition) / (screenHeight * 0.3); // Пропорциональное исчезновение
+                    const opacity = Math.max(0, visibilityFactor); // Ограничиваем значение между 0 и 1
+                    entry.target.style.opacity = opacity.toString(); // Устанавливаем прозрачность
+                    entry.target.style.transform = `translateY(${(1 - opacity) * 20}px)`; // Сдвигаем вверх
+                }
+            }
+        });
+    }, { threshold: [0, 1] }); // Отслеживаем полную видимость
+
+    // Наблюдаем за каждым элементом
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
 });
 
   // Обработчик формы
