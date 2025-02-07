@@ -39,6 +39,34 @@ document.addEventListener('DOMContentLoaded', () => {
       appearOnScroll.observe(fadeIn);
   });
 
+  // Отслеживаем видимость элементов
+document.addEventListener('DOMContentLoaded', () => {
+  const fadeElements = document.querySelectorAll('.fade-in'); // Все элементы с классом .fade-in
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              // Если элемент виден, показываем его
+              entry.target.classList.add('visible');
+              entry.target.classList.remove('fade-out');
+          } else {
+              // Если элемент выходит за пределы экрана, скрываем его
+              const rect = entry.boundingClientRect;
+              if (rect.top < 0) {
+                  entry.target.classList.add('fade-out');
+              } else {
+                  entry.target.classList.remove('fade-out');
+              }
+          }
+      });
+  }, { threshold: [0, 1] }); // Отслеживаем полную видимость
+
+  // Наблюдаем за каждым элементом
+  fadeElements.forEach(element => {
+      observer.observe(element);
+  });
+});
+
   // Обработчик формы
   const form = document.getElementById('guest-form');
   form.addEventListener('submit', (e) => {
