@@ -85,11 +85,11 @@ button:hover {
   margin-bottom: 50px;
 }
 
-/* Анимация появления текста */
+/* Эффект появления */
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  opacity: 0; /* Начальная прозрачность */
+  transform: translateY(20px); /* Начальный сдвиг */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Плавный переход */
 }
 
 /* Эффект исчезновения */
@@ -99,9 +99,10 @@ button:hover {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Плавный переход */
 }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Элемент стал видимым */
+.visible {
+  opacity: 1; /* Полная видимость */
+  transform: translateY(0); /* Возвращаем на место */
 }
 
 /* Форма */

@@ -42,22 +42,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              entry.target.classList.remove('fade-out');
+              // Если элемент виден, показываем его
+              entry.target.classList.add('visible'); // Добавляем класс visible
+              entry.target.classList.remove('fade-out'); // Убираем класс fade-out
+              entry.target.style.opacity = ''; // Сбрасываем инлайн-стили
+              entry.target.style.transform = ''; // Сбрасываем инлайн-стили
           } else {
+              // Если элемент выходит за пределы экрана
               const rect = entry.boundingClientRect;
               const screenHeight = window.innerHeight;
-
+  
               if (rect.top < screenHeight * 0.7) {
+                  // Рассчитываем степень видимости
                   const visibilityFactor = (screenHeight - rect.top) / (screenHeight * 0.3);
                   const opacity = Math.max(0, visibilityFactor);
+  
+                  // Применяем стили пропорционально видимости
                   entry.target.style.opacity = opacity.toString();
                   entry.target.style.transform = `translateY(${(1 - opacity) * 20}px)`;
+              } else {
+                  // Если элемент полностью вне видимости, сбрасываем стили
+                  entry.target.style.opacity = '';
+                  entry.target.style.transform = '';
               }
           }
       });
-  }, { threshold: [0, 1] });
-
+  }, { threshold: [0, 1] }); // Отслеживаем полную видимость
+  
+  // Наблюдаем за каждым элементом
   fadeElements.forEach(element => {
       observer.observe(element);
   });
