@@ -21,14 +21,14 @@ p {
 
 /* Исключаем текст с цветом #b76e79 из изменений */
 p strong, .timer {
-  color: #ff8a3d; /* Оставляем акцентный цвет без изменений */
+  color: #a47864; /* Оставляем акцентный цвет без изменений */
   font-size: inherit; /* Размер шрифта останется таким же, как у родителя */
 }
 
 #countdown {
   font-size: 28px; /* Используем больший размер */
   font-weight: bold;
-  color: #ff8a3d;
+  color: #a47864;
   text-align: center;
   margin: 10px 0 20px; /* Объединяем верхний и нижний отступ */
 }
@@ -92,7 +92,7 @@ input[type="text"], input[type="checkbox"], input[type="radio"] {
 /* Кнопка */
 button { 
   padding: 10px 20px; 
-  background-color: #ff8a3d; 
+  background-color: #a47864; 
   color: white; 
   border: none; 
   cursor: pointer; 
@@ -101,7 +101,7 @@ button {
 } 
 
 button:hover {
-  background-color: #a05a65;
+  background-color: #a47864;
   transform: scale(1.05); /* Немного увеличивается при наведении */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -111,6 +111,27 @@ button:hover {
   font-weight: 400;
   font-style: normal;
   color: #020001; /* Яркий розовый цвет */
+}
+
+/* Подсветка активного текстового поля */
+input[type="text"]:focus {
+  outline: none; /* Убираем стандартную рамку */
+  border: 2px solid #c25a7c; /* Добавляем розовую рамку */
+  box-shadow: 0 0 5px rgba(194, 90, 124, 0.5); /* Лёгкая тень */
+}
+
+/* Подсветка активного чекбокса/радио */
+input[type="checkbox"]:focus + label,
+input[type="radio"]:focus + label {
+  color: #c25a7c; /* Изменяем цвет текста рядом с меткой */
+  font-weight: bold;
+}
+
+/* Анимация при наведении на чекбоксы/радио */
+input[type="checkbox"]:hover + label,
+input[type="radio"]:hover + label {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Для экранов меньше 768px */
