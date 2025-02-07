@@ -35,7 +35,7 @@ p strong, .timer {
 
 /* Таймер */
 #countdown {
-  font-size: 28px; /* Размер шрифта */
+  font-size: 26px; /* Размер шрифта */
   font-weight: bold;
   color: #a47864; /* Цвет текста */
   text-align: center;
@@ -44,7 +44,7 @@ p strong, .timer {
 
 #countdown span {
   display: block; /* Каждая строка на новой строке */
-  font-size: 18px; /* Меньший размер для текста */
+  font-size: 30px; /* Меньший размер для текста */
   font-weight: normal; /* Обычный стиль для текста */
   color: #333; /* Цвет текста */
   margin-bottom: 5px; /* Отступ между строками */
