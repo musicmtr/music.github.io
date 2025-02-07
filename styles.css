@@ -35,11 +35,19 @@ p strong, .timer {
 
 /* Таймер */
 #countdown {
-  font-size: 28px;
+  font-size: 28px; /* Размер шрифта */
   font-weight: bold;
-  color: #a47864;
+  color: #a47864; /* Цвет текста */
   text-align: center;
   margin: 10px 0 20px;
+}
+
+#countdown span {
+  display: block; /* Каждая строка на новой строке */
+  font-size: 18px; /* Меньший размер для текста */
+  font-weight: normal; /* Обычный стиль для текста */
+  color: #333; /* Цвет текста */
+  margin-bottom: 5px; /* Отступ между строками */
 }
 
 /* Контейнер */

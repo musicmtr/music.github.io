@@ -4,21 +4,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const countdownTimer = setInterval(() => {
       const now = new Date().getTime();
       const timeLeft = weddingDate - now;
-
+  
       if (timeLeft <= 0) {
-          document.getElementById("countdown").innerHTML = "Сегодня день свадьбы! 🎉";
+          document.getElementById("countdown").innerHTML = `
+              <span>Сегодня день свадьбы!</span>
+              <strong>🎉</strong>
+          `;
           clearInterval(countdownTimer);
           return;
       }
-
+  
+      // Вычисляем дни, часы и минуты
       const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
       const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
+  
       document.getElementById("countdown").innerHTML = `
-          До свадьбы осталось: 
-          <strong>${days} дней ${hours} часов ${minutes} минут ${seconds} секунд</strong>
+          <span>До свадьбы осталось:</span>
+          <strong>${days} дней ${hours} часов ${minutes} минут</strong>
       `;
   }, 1000);
 
