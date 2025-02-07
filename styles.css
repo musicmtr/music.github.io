@@ -1,63 +1,83 @@
-body {
-  font-family: 'Marck Script', cursive;
-  background-color: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
+/* Основные стили */
+body { 
+  font-family: 'Marck Script', cursive; 
+  background-image: url('images/fon.jpg'); /* Фоновое изображение */
+  background-size: cover; /* Растягиваем на весь экран */
+  background-position: center; /* Центрируем */
+  background-attachment: fixed; /* Фиксируем фон */
+  color: #333; 
+  margin: 0; 
+  padding: 0; 
+  line-height: 1.6; 
+  text-align: center; /* Центрирование всего текста */
+} 
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
+/* Контейнер для контента */
+.container { 
+  max-width: 800px; 
+  margin: 50px auto; /* Центрируем и добавляем отступ сверху */
+  padding: 20px; 
+  background: rgba(255, 255, 255, 0.8); /* Светлый прозрачный фон */
+  border-radius: 10px; /* Скругление углов */
+} 
 
-h1, h2 {
-  font-family: 'Great Vibes', cursive;
-  text-align: center;
-  color: #b76e79;
-}
+h1, h2 { 
+  font-family: 'Great Vibes', cursive; 
+  color: #b76e79; 
+} 
 
-.section {
-  margin-bottom: 50px;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-label {
+.timer {
+  font-size: 24px;
   font-weight: bold;
+  color: #b76e79;
+  margin-bottom: 20px;
 }
 
-input[type="text"], input[type="checkbox"], input[type="radio"] {
-  margin-right: 10px;
-}
+/* Отступы между секциями */
+.section { 
+  margin-bottom: 50px; 
+} 
 
-button {
-  padding: 10px 20px;
-  background-color: #b76e79;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-family: 'Marck Script', cursive;
-  font-size: 18px;
-}
+/* Анимация появления текста */
+.fade-in { 
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
+} 
 
-button:hover {
-  background-color: #a05a65;
+.fade-in.visible { 
+  opacity: 1; 
+  transform: translateY(0); 
+} 
+
+/* Центрируем форму */
+form { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 15px; 
+} 
+
+label { 
+  font-weight: bold; 
+} 
+
+/* Стили для инпутов */
+input[type="text"], input[type="checkbox"], input[type="radio"] { 
+  margin-right: 10px; 
+} 
+
+/* Кнопка */
+button { 
+  padding: 10px 20px; 
+  background-color: #b76e79; 
+  color: white; 
+  border: none; 
+  cursor: pointer; 
+  font-family: 'Marck Script', cursive; 
+  font-size: 18px; 
+} 
+
+button:hover { 
+  background-color: #a05a65; 
 }

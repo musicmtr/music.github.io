@@ -1,4 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { 
+  // Устанавливаем дату свадьбы
+  const weddingDate = new Date("July 11, 2025 10:00:00").getTime();
+
+  // Обновляем таймер каждую секунду
+  const countdownTimer = setInterval(function() {
+      const now = new Date().getTime();
+      const timeLeft = weddingDate - now;
+
+      if (timeLeft <= 0) {
+          document.getElementById("countdown").innerHTML = "Сегодня день свадьбы! 🎉";
+          clearInterval(countdownTimer);
+          return;
+      }
+
+      // Вычисляем дни, часы, минуты и секунды
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML = До свадьбы осталось: <strong>${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд</strong>;
+  }, 1000);
+
+  // Анимация появления текста
   const fadeIns = document.querySelectorAll('.fade-in');
 
   const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
@@ -13,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       appearOnScroll.observe(fadeIn);
   });
 
+  // Обработчик формы
   const form = document.getElementById('guest-form');
   form.addEventListener('submit', (e) => {
       e.preventDefault();
