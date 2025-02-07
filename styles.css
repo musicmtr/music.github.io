@@ -89,3 +89,23 @@ button {
 button:hover { 
   background-color: #a05a65; 
 }
+
+/* Для экранов меньше 768px */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px; /* Уменьшаем внутренний отступ */
+  }
+
+  h1, h2 {
+      font-size: 24px; /* Уменьшаем размер заголовков */
+  }
+
+  #countdown {
+      font-size: 20px; /* Уменьшаем размер текста таймера */
+  }
+
+  button {
+      font-size: 16px; /* Уменьшаем размер кнопки */
+      padding: 8px 15px;
+  }
+}

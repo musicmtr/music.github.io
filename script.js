@@ -19,7 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-      document.getElementById("countdown").innerHTML = `До свадьбы осталось: <strong>${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд</strong>`;
+      const formatTime = (num) => num < 10 ? `0${num}` : num;
+      document.getElementById("countdown").innerHTML = `
+          До свадьбы осталось: 
+          <strong>${days} дней ${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}</strong>
+      `;
 
   // Анимация появления текста
   const fadeIns = document.querySelectorAll('.fade-in');
