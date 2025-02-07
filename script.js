@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-      document.getElementById("countdown").innerHTML = До свадьбы осталось: <strong>${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд</strong>;
+      document.getElementById("countdown").innerHTML = 'До свадьбы осталось: <strong>${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд</strong>';
   }, 1000);
 
   // Анимация появления текста
