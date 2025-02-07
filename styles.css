@@ -135,6 +135,35 @@ input[type="radio"]:hover + label {
   text-decoration: underline;
 }
 
+/* Стрелка для скролла */
+.scroll-indicator {
+  position: fixed; /* Фиксированное положение */
+  bottom: 20px; /* Расположение внизу экрана */
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translateX(-50%); /* Точное центрирование */
+  z-index: 100; /* Поверх остальных элементов */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-arrow {
+  width: 50px; /* Размер стрелки */
+  height: auto;
+  opacity: 0.8; /* Лёгкая прозрачность */
+  animation: bounce 2s infinite ease-in-out; /* Анимация подпрыгивания */
+}
+
+/* Анимация подпрыгивания */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px); /* Подпрыгивание на 10 пикселей */
+  }
+}
+
 /* Медиа-запросы */
 @media (max-width: 768px) {
   .container {

@@ -72,6 +72,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollArrow = document.querySelector('.scroll-arrow');
+  let lastScrollPosition = 0; // Последняя позиция прокрутки
+  let isAtBottom = false; // Флаг для проверки достижения конца страницы
+
+  // Проверяем, достигнут ли конец страницы
+  function checkScrollPosition() {
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Если скроллим вниз или достигли конца страницы
+      if (scrollTop > lastScrollPosition || scrollTop + windowHeight >= documentHeight) {
+          scrollArrow.style.opacity = '0'; // Стрелка исчезает
+          scrollArrow.style.pointerEvents = 'none'; // Отключаем взаимодействие
+          isAtBottom = true;
+      } else {
+          scrollArrow.style.opacity = '0.8'; // Стрелка появляется
+          scrollArrow.style.pointerEvents = 'auto';
+          isAtBottom = false;
+      }
+
+      lastScrollPosition = scrollTop;
+  }
+
+  // Запускаем проверку при прокрутке
+  window.addEventListener('scroll', () => {
+      checkScrollPosition();
+  });
+
+  // Автоматическое исчезновение через 10 секунд без действия
+  let timeoutId;
+  function resetTimeout() {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+          if (!isAtBottom) {
+              scrollArrow.style.opacity = '0'; // Стрелка исчезает
+              scrollArrow.style.pointerEvents = 'none';
+          }
+      }, 10000); // 10 секунд
+  }
+
+  // Сбрасываем таймер при прокрутке
+  window.addEventListener('scroll', resetTimeout);
+  window.addEventListener('mousemove', resetTimeout);
+
+  // Инициализация
+  checkScrollPosition();
+  resetTimeout();
+});
+
   // Обработчик формы
   const form = document.getElementById('guest-form');
   form.addEventListener('submit', (e) => {
