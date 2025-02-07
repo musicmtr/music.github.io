@@ -12,6 +12,14 @@ body {
   text-align: center; /* Центрирование всего текста */
 } 
 
+#countdown {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  color: #b76e79;
+}
+
 /* Контейнер для контента */
 .container { 
   max-width: 800px; 
