@@ -96,28 +96,32 @@ button:hover {
 /* Анимация появления сверху */
 .fade-in-top {
   opacity: 0;
-  transform: translateY(-20px); /* Сдвигаем элемент вверх */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Плавный переход */
+  transform: translateY(-40px); /* Увеличиваем сдвиг до 40px */
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.2s */
+              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Анимация появления снизу */
 .fade-in-bottom {
   opacity: 0;
-  transform: translateY(20px); /* Сдвигаем элемент вниз */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Плавный переход */
+  transform: translateY(40px); /* Увеличиваем сдвиг до 40px */
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.2s */
+              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Эффект исчезновения */
 .fade-out {
   opacity: 0; /* Полная прозрачность */
-  transform: translateY(-20px); /* Сдвигаем элемент вверх */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Плавный переход */
+  transform: translateY(-40px); /* Сдвигаем элемент вверх */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Плавный переход */
 }
 
 /* Элемент стал видимым */
 .visible {
   opacity: 1;
   transform: translateY(0); /* Возвращаем на место */
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), /* Сохраняем плавный переход */
+              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Форма */
