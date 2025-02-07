@@ -53,10 +53,14 @@ p strong, .timer {
 }
 
 /* Заголовки с шрифтом Marck Script */
+/* Объёмный текст с тенью */
 h1, h2 {
   font-family: "Marck Script", cursive;
   color: #a47864;
   font-size: 36px;
+  text-shadow: 
+      2px 2px 5px rgba(0, 0, 0, 0.2), /* Тень позади текста */
+      -1px -1px 5px rgba(255, 255, 255, 0.5); /* Светлый контур */
 }
 
 /* Кнопки с шрифтом Marck Script */
