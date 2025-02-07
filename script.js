@@ -38,90 +38,80 @@ document.addEventListener('DOMContentLoaded', () => {
   fadeIns.forEach(fadeIn => {
       appearOnScroll.observe(fadeIn);
   });
-
+  
   document.addEventListener('DOMContentLoaded', () => {
+    // Блок для анимации появления текста
     const fadeElements = document.querySelectorAll('.fade-in'); // Все элементы с классом .fade-in
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Если элемент виден, показываем его
-                entry.target.style.opacity = '1'; // Полная видимость
-                entry.target.style.transform = 'translateY(0)'; // Возвращаем на место
                 entry.target.classList.add('visible');
+                entry.target.classList.remove('fade-out');
             } else {
-                // Рассчитываем степень видимости
                 const rect = entry.boundingClientRect;
-                const topPosition = rect.top; // Расстояние от верха экрана до элемента
-                const screenHeight = window.innerHeight; // Высота экрана
+                const screenHeight = window.innerHeight;
 
-                // Начинаем скрывать элемент, когда он находится выше определённой точки
-                if (topPosition < screenHeight * 0.8) { // 80% высоты экрана
-                    const visibilityFactor = (screenHeight - topPosition) / (screenHeight * 0.3); // Пропорциональное исчезновение
-                    const opacity = Math.max(0, visibilityFactor); // Ограничиваем значение между 0 и 1
-                    entry.target.style.opacity = opacity.toString(); // Устанавливаем прозрачность
-                    entry.target.style.transform = `translateY(${(1 - opacity) * 20}px)`; // Сдвигаем вверх
+                if (rect.top < screenHeight * 0.7) {
+                    const visibilityFactor = (screenHeight - rect.top) / (screenHeight * 0.3);
+                    const opacity = Math.max(0, visibilityFactor);
+                    entry.target.style.opacity = opacity.toString();
+                    entry.target.style.transform = `translateY(${(1 - opacity) * 20}px)`;
                 }
             }
         });
-    }, { threshold: [0, 1] }); // Отслеживаем полную видимость
+    }, { threshold: [0, 1] });
 
-    // Наблюдаем за каждым элементом
     fadeElements.forEach(element => {
         observer.observe(element);
     });
+
+    // Блок для стрелки скролла
+    const scrollArrow = document.querySelector('.scroll-arrow');
+    let lastScrollPosition = 0;
+    let isAtBottom = false;
+
+    function checkScrollPosition() {
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        if (scrollTop + windowHeight >= documentHeight - 10) {
+            scrollArrow.style.opacity = '0';
+            scrollArrow.style.pointerEvents = 'none';
+            isAtBottom = true;
+        } else {
+            scrollArrow.style.opacity = '0.8';
+            scrollArrow.style.pointerEvents = 'auto';
+            isAtBottom = false;
+        }
+
+        lastScrollPosition = scrollTop;
+    }
+
+    window.addEventListener('scroll', () => {
+        checkScrollPosition();
+    });
+
+    let timeoutId;
+    function resetTimeout() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            if (!isAtBottom) {
+                scrollArrow.style.opacity = '0';
+                scrollArrow.style.pointerEvents = 'none';
+            }
+        }, 10000);
+    }
+
+    window.addEventListener('scroll', resetTimeout);
+    window.addEventListener('mousemove', resetTimeout);
+
+    // Инициализация
+    checkScrollPosition();
+    resetTimeout();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const scrollArrow = document.querySelector('.scroll-arrow');
-  let lastScrollPosition = 0; // Последняя позиция прокрутки
-  let isAtBottom = false; // Флаг для проверки достижения конца страницы
-
-  // Проверяем, достигнут ли конец страницы
-  function checkScrollPosition() {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-
-      // Если скроллим вниз или достигли конца страницы
-      if (scrollTop > lastScrollPosition || scrollTop + windowHeight >= documentHeight) {
-          scrollArrow.style.opacity = '0'; // Стрелка исчезает
-          scrollArrow.style.pointerEvents = 'none'; // Отключаем взаимодействие
-          isAtBottom = true;
-      } else {
-          scrollArrow.style.opacity = '0.8'; // Стрелка появляется
-          scrollArrow.style.pointerEvents = 'auto';
-          isAtBottom = false;
-      }
-
-      lastScrollPosition = scrollTop;
-  }
-
-  // Запускаем проверку при прокрутке
-  window.addEventListener('scroll', () => {
-      checkScrollPosition();
-  });
-
-  // Автоматическое исчезновение через 10 секунд без действия
-  let timeoutId;
-  function resetTimeout() {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-          if (!isAtBottom) {
-              scrollArrow.style.opacity = '0'; // Стрелка исчезает
-              scrollArrow.style.pointerEvents = 'none';
-          }
-      }, 10000); // 10 секунд
-  }
-
-  // Сбрасываем таймер при прокрутке
-  window.addEventListener('scroll', resetTimeout);
-  window.addEventListener('mousemove', resetTimeout);
-
-  // Инициализация
-  checkScrollPosition();
-  resetTimeout();
-});
 
   // Обработчик формы
   const form = document.getElementById('guest-form');
