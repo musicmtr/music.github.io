@@ -24,64 +24,64 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
   }, 1000);
 
-  // Анимация появления текста
-  let lastScrollPosition = 0; // Трекаем последнюю позицию прокрутки
+// Блок для анимации появления текста
+let lastScrollPosition = 0; // Трекаем последнюю позицию прокрутки
 
-  const fadeElements = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              // Если элемент виден, показываем его
-              entry.target.classList.add('visible'); // Добавляем класс visible
-              entry.target.classList.remove('fade-in-top', 'fade-in-bottom'); // Убираем эффекты
-          } else {
-              // Если элемент выходит за пределы экрана
-              const rect = entry.boundingClientRect;
-              const screenHeight = window.innerHeight;
+const fadeElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Если элемент виден, показываем его
+            entry.target.classList.add('visible'); // Добавляем класс visible
+            entry.target.classList.remove('fade-in-top', 'fade-in-bottom'); // Убираем эффекты
+        } else {
+            // Если элемент выходит за пределы экрана
+            const rect = entry.boundingClientRect;
+            const screenHeight = window.innerHeight;
 
-              if (rect.top < screenHeight * 0.7) {
-                  // Если элемент выходит сверху
-                  entry.target.classList.add('fade-in-top');
-                  entry.target.classList.remove('fade-in-bottom');
-              } else if (rect.bottom > screenHeight * 0.3) {
-                  // Если элемент выходит снизу
-                  entry.target.classList.add('fade-in-bottom');
-                  entry.target.classList.remove('fade-in-top');
-              }
-          }
-      });
-  }, { threshold: [0, 1] }); // Отслеживаем полную видимость
+            if (rect.top < screenHeight * 0.7) {
+                // Если элемент выходит сверху
+                entry.target.classList.add('fade-in-top');
+                entry.target.classList.remove('fade-in-bottom');
+            } else if (rect.bottom > screenHeight * 0.3) {
+                // Если элемент выходит снизу
+                entry.target.classList.add('fade-in-bottom');
+                entry.target.classList.remove('fade-in-top');
+            }
+        }
+    });
+}, { threshold: [0, 1] }); // Отслеживаем полную видимость
 
-  // Наблюдаем за каждым элементом
-  fadeElements.forEach(element => {
-      observer.observe(element);
-  });
+// Наблюдаем за каждым элементом
+fadeElements.forEach(element => {
+    observer.observe(element);
+});
 
-  // Определяем направление прокрутки
-  window.addEventListener('scroll', () => {
-      const currentScrollPosition = window.scrollY;
+// Определяем направление прокрутки
+window.addEventListener('scroll', () => {
+    const currentScrollPosition = window.scrollY;
 
-      // Если скроллим вниз
-      if (currentScrollPosition > lastScrollPosition) {
-          fadeElements.forEach(element => {
-              if (!element.classList.contains('visible')) {
-                  element.classList.add('fade-in-bottom');
-                  element.classList.remove('fade-in-top');
-              }
-          });
-      } 
-      // Если скроллим вверх
-      else {
-          fadeElements.forEach(element => {
-              if (!element.classList.contains('visible')) {
-                  element.classList.add('fade-in-top');
-                  element.classList.remove('fade-in-bottom');
-              }
-          });
-      }
+    // Если скроллим вниз
+    if (currentScrollPosition > lastScrollPosition) {
+        fadeElements.forEach(element => {
+            if (!element.classList.contains('visible')) {
+                element.classList.add('fade-in-bottom');
+                element.classList.remove('fade-in-top');
+            }
+        });
+    } 
+    // Если скроллим вверх
+    else {
+        fadeElements.forEach(element => {
+            if (!element.classList.contains('visible')) {
+                element.classList.add('fade-in-top');
+                element.classList.remove('fade-in-bottom');
+            }
+        });
+    }
 
-      lastScrollPosition = currentScrollPosition;
-  });
+    lastScrollPosition = currentScrollPosition;
+});
 
   // Блок для стрелки скролла
   const scrollArrow = document.querySelector('.scroll-arrow');
