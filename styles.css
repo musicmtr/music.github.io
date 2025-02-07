@@ -270,6 +270,23 @@ input[type="radio"]:hover + label {
   }
 }
 
+/* Контейнер для картинки-календаря */
+.calendar-image {
+  display: flex; /* Центрирование по горизонтали */
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+/* Стиль для картинки */
+.calendar {
+  max-width: 100%; /* Адаптивность */
+  height: auto; /* Сохраняем пропорции */
+  width: 300px; /* Фиксированная ширина (можно изменить) */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+  border-radius: 10px; /* Скруглённые углы */
+}
+
 /* Медиа-запросы */
 @media (max-width: 768px) {
   .container {
@@ -292,4 +309,8 @@ input[type="radio"]:hover + label {
     font-size: 16px;
     padding: 8px 15px;
   }
+
+  .calendar {
+    width: 200px; /* Уменьшаем размер картинки */
+}
 }
