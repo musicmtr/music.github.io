@@ -272,6 +272,7 @@ input[type="radio"]:hover + label {
 
 Контейнер для картинки-календаря
 .calendar-container {
+  text-align: center; /* Центрирование содержимого */
   display: inline-block; /* Делаем контейнер строчным блоком */
   border-radius: 0 0 0 0; /* Закругление углов */
   overflow: hidden; /* Обрезаем углы изображения */
