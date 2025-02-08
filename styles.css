@@ -200,6 +200,21 @@ button:hover {
               transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+/* Контейнер для таймера */
+.countdown-container {
+  display: flex; /* Используем Flexbox */
+  flex-direction: column; /* Вертикальное расположение элементов */
+  align-items: center; /* Центрируем содержимое по горизонтали */
+  justify-content: center; /* Центрируем содержимое по вертикали (если нужно) */
+  margin: 20px auto; /* Отступы и центрирование самого контейнера */
+}
+
+/* Текст "До свадьбы осталось:" */
+.countdown-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px; /* Размер шрифта */
+  color: #333; /* Цвет текста */
+
 /* Анимация появления сверху */
 .fade-in-top {
   opacity: 0;
