@@ -193,26 +193,25 @@ button:hover {
 /* Стиль для плавного появления текста */
 .fade-in {
   opacity: 0; /* Начальная прозрачность */
-  transform: translateY(20px); /* Начальный сдвиг */
-  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), /* Плавный переход */
-              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-  margin: 15px 0; /* Добавляем отступы между абзацами */
+  transform: translateY(30px); /* Начальный сдвиг */
+  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.5s */
+              transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Анимация появления сверху */
 .fade-in-top {
   opacity: 0;
-  transform: translateY(-40px); /* Увеличиваем сдвиг до 40px */
-  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.2s */
-              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: translateY(-30px); /* Сдвиг вверх */
+  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.5s */
+              transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Анимация появления снизу */
 .fade-in-bottom {
   opacity: 0;
-  transform: translateY(40px); /* Увеличиваем сдвиг до 40px */
-  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.2s */
-              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: translateY(30px); /* Сдвиг вниз */
+  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.5s */
+              transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Эффект исчезновения */
@@ -224,10 +223,10 @@ button:hover {
 
 /* Элемент стал видимым */
 .visible {
-  opacity: 1;
+  opacity: 1; /* Полная видимость */
   transform: translateY(0); /* Возвращаем на место */
-  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), /* Сохраняем плавный переход */
-              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), /* Сохраняем плавный переход */
+              transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Форма */

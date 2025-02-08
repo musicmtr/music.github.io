@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const rect = entry.boundingClientRect;
                 const screenHeight = window.innerHeight;
 
-                if (rect.top < screenHeight * 0.7) {
+                if (rect.top < screenHeight * 0.6) {
                     entry.target.classList.add('fade-in-top');
                     entry.target.classList.remove('fade-in-bottom');
                 } else if (rect.bottom > screenHeight * 0.3) {
