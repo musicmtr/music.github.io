@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 
         document.getElementById("countdown").innerHTML = `
-            <span>До свадьбы осталось:</span>
             <strong>${days} дней ${hours} часов ${minutes} минут</strong>
         `;
     }, 1000);
