@@ -103,11 +103,13 @@ strong {
 }
 
 /* Текстовое поле для даты */
-.date-container p {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700; /* Жирный стиль */
-  font-size: 24px;
-  color: #333;
+.date-container {
+  text-align: center; /* Центрирование содержимого */
+  margin: 20px auto; /* Отступы и центрирование по горизонтали */
+  width: 100%; /* Занимает всю доступную ширину */
+  display: flex; /* Используем Flexbox */
+  justify-content: center; /* Центрируем внутренний контент */
+  align-items: center; /* Центрируем вертикально (если нужно) */
 }
 
 /* Таймер */
@@ -270,14 +272,12 @@ input[type="radio"]:hover + label {
   }
 }
 
-Контейнер для картинки-календаря
+/* Контейнер для картинки-календаря */
 .calendar-container {
-  text-align: center; /* Центрирование содержимого */
   display: inline-block; /* Делаем контейнер строчным блоком */
   border-radius: 0 0 0 0; /* Закругление углов */
   overflow: hidden; /* Обрезаем углы изображения */
   width: 300px; /* Фиксированная ширина */
-  margin: 20px auto; /* Центрирование по горизонтали */
 }
 
 /* Стиль для картинки */
@@ -312,7 +312,13 @@ input[type="radio"]:hover + label {
   }
 
   .calendar {
-      width: 200px;
-      border-radius: 15px 0 0 15px; /* Пропорционально уменьшаем радиусы */
+    max-width: 100%; /* Адаптивность */
+    height: auto; /* Сохраняем пропорции */
+    display: block; /* Убираем лишние пробелы вокруг картинки */
   }
+
+  .calendar-container {
+    width: 200px; /* Уменьшаем размер контейнера */
+    border-radius: 15px 0 0 15px; /* Пропорционально уменьшаем радиусы */
+}
 }
