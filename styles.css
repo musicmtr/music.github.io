@@ -181,6 +181,15 @@ button:hover {
   margin-bottom: 50px;
 }
 
+/* Стиль для плавного появления текста */
+.fade-in {
+  opacity: 0; /* Начальная прозрачность */
+  transform: translateY(20px); /* Начальный сдвиг */
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), /* Плавный переход */
+              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  margin: 15px 0; /* Добавляем отступы между абзацами */
+}
+
 /* Анимация появления сверху */
 .fade-in-top {
   opacity: 0;
@@ -320,5 +329,9 @@ input[type="radio"]:hover + label {
   .calendar-container {
     width: 200px; /* Уменьшаем размер контейнера */
     border-radius: 15px 0 0 15px; /* Пропорционально уменьшаем радиусы */
-}
+  }
+
+  .fade-in {
+    margin: 10px 0; /* Уменьшаем отступы на мобильных устройствах */
+  }
 }
