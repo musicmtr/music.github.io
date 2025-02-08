@@ -192,6 +192,8 @@ button:hover {
 
 /* Стиль для плавного появления текста */
 .fade-in {
+  text-align: justify; /* Выравниваем текст по ширине */
+  margin-bottom: 20px; /* Отступ между элементами */
   opacity: 0; /* Начальная прозрачность */
   transform: translateY(30px); /* Начальный сдвиг */
   transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.5s */
