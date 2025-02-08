@@ -270,8 +270,10 @@ input[type="radio"]:hover + label {
   }
 }
 
-/* Контейнер для картинки-календаря */
+Контейнер для картинки-календаря
 .calendar-image {
+  display: flex; /* Используем Flexbox */
+  justify-content: center; /* Центрирование по горизонтали */
   display: inline-block; /* Делаем контейнер строчным блоком */
   border-radius: 0 0 0 0; /* Закругляем только левый верхний и правый нижний углы */
   overflow: hidden; /* Обрезаем углы изображения */
@@ -283,7 +285,7 @@ input[type="radio"]:hover + label {
   max-width: 100%;
   height: auto;
   width: 300px;
-  border-radius: 20px 0 0 20px; /* Острые углы: левый верхний и правый нижний */
+  border-radius: 0 0 0 0; /* Острые углы: левый верхний и правый нижний */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
