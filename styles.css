@@ -214,6 +214,7 @@ button:hover {
   font-family: "Cormorant Garamond", serif;
   font-size: 24px; /* Размер шрифта */
   color: #333; /* Цвет текста */
+}
 
 /* Анимация появления сверху */
 .fade-in-top {
