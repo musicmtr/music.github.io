@@ -26,27 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Анимация появления текста
     let lastScrollPosition = 0;
     const fadeElements = document.querySelectorAll('.fade-in');
-
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3 // Элемент становится видимым, когда 30% находится в области видимости
+    };
+    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                entry.target.classList.remove('fade-in-top', 'fade-in-bottom');
-            } else {
-                const rect = entry.boundingClientRect;
-                const screenHeight = window.innerHeight;
-
-                if (rect.top < screenHeight * 0.6) {
-                    entry.target.classList.add('fade-in-top');
-                    entry.target.classList.remove('fade-in-bottom');
-                } else if (rect.bottom > screenHeight * 0.3) {
-                    entry.target.classList.add('fade-in-bottom');
-                    entry.target.classList.remove('fade-in-top');
-                }
+                observer.unobserve(entry.target); // Прекратить наблюдение после появления
             }
         });
-    }, { threshold: [0, 1] });
-
+    }, observerOptions);
+    
     fadeElements.forEach(element => {
         observer.observe(element);
     });
@@ -74,69 +68,85 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollPosition = currentScrollPosition;
     });
 
-    // Стрелка для скролла
-    const scrollArrow = document.querySelector('.scroll-arrow');
-    let isAtBottom = false;
-
-    function checkScrollPosition() {
-        const scrollTop = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-
-        if (scrollTop + windowHeight >= documentHeight - 10) {
-            scrollArrow.style.opacity = '0';
-            scrollArrow.style.pointerEvents = 'none';
-            isAtBottom = true;
-        } else {
-            scrollArrow.style.opacity = '0.8';
-            scrollArrow.style.pointerEvents = 'auto';
-            isAtBottom = false;
-        }
-    }
-
-    window.addEventListener('scroll', () => {
-        checkScrollPosition();
+    // стрелка кнопки вверх
+    document.querySelector('.back-to-top').addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
-    let timeoutId;
-    function resetTimeout() {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-            if (!isAtBottom) {
-                scrollArrow.style.opacity = '0';
-                scrollArrow.style.pointerEvents = 'none';
-            }
-        }, 10000);
+    // Стрелка для скролла
+    const scrollArrow = document.querySelector('.scroll-arrow');
+
+    // Скрываем стрелку изначально
+    scrollArrow.style.opacity = '0';
+    scrollArrow.style.pointerEvents = 'none';
+    
+    // Функция для показа стрелки
+    function showScrollArrow() {
+        scrollArrow.style.opacity = '0.8';
+        scrollArrow.style.pointerEvents = 'auto';
     }
-
-    window.addEventListener('scroll', resetTimeout);
-    window.addEventListener('mousemove', resetTimeout);
-
-    checkScrollPosition();
-    resetTimeout();
+    
+    // Функция для скрытия стрелки
+    function hideScrollArrow() {
+        scrollArrow.style.opacity = '0';
+        scrollArrow.style.pointerEvents = 'none';
+    }
+    
+    // Таймер для автоматического показа стрелки
+    let showArrowTimeout;
+    
+    // Сброс таймера при действиях пользователя (скролл или движение мыши)
+    function resetShowArrowTimer() {
+        clearTimeout(showArrowTimeout); // Очищаем предыдущий таймер
+        showArrowTimeout = setTimeout(() => {
+            showScrollArrow(); // Показываем стрелку через 5 секунд
+        }, 5000);
+    }
+    
+    // Слушатели событий для сброса таймера
+    window.addEventListener('scroll', () => {
+        hideScrollArrow(); // Сразу скрываем стрелку при скролле
+        resetShowArrowTimer(); // Запускаем новый таймер
+    });
+    
+    window.addEventListener('mousemove', () => {
+        hideScrollArrow(); // Сразу скрываем стрелку при движении мыши
+        resetShowArrowTimer(); // Запускаем новый таймер
+    });
+    
+    // Инициализация: запускаем первый таймер
+    resetShowArrowTimer();
 
     // Обработчик формы
     const form = document.getElementById('guest-form');
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-
+    
         const name = form.querySelector('#name').value.trim();
         const attendance = form.querySelector('input[name="attendance"]:checked');
         const food = form.querySelector('input[name="food"]:checked');
-
+    
         if (!name || !attendance || !food) {
             alert('Пожалуйста, заполните все обязательные поля!');
             return;
         }
-
+    
         const formData = new FormData(form);
         const data = {};
         formData.forEach((value, key) => {
             data[key] = value;
         });
-
+    
         console.log(data); // Здесь можно отправить данные на сервер
-        alert('Спасибо за вашу анкету!');
+    
+        // Показать сообщение об успехе
+        alert('Спасибо за вашу анкету! Мы ждем вас на свадьбе.');
+    
+        // Сбросить форму
         form.reset();
     });
 });

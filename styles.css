@@ -4,6 +4,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   color: #333; /* Цвет текста */
   margin: 0;
   padding: 0;
@@ -125,9 +126,12 @@ strong {
 .timer {
   font-size: 26px;
   font-weight: bold;
-  color: #a47864; /* Акцентный цвет */
+  color: #a47864;
   text-align: center;
-  margin: 10px 0 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Текст "До свадьбы осталось:" */
@@ -239,6 +243,75 @@ button:hover {
   transition: opacity 1s ease-out, transform 1s ease-out; /* Плавный переход */
 }
 
+/* Плавное появление с левой стороны */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Плавное появление с правой стороны */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+
+/* Общий стиль для полей ввода */
+input[type="text"],
+input[type="radio"],
+input[type="checkbox"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Стиль для радиокнопок и чекбоксов */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Активное состояние для радиокнопок и чекбоксов */
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  color: #a47864;
+  font-weight: bold;
+}
+
+a {
+  color: #a47864;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #b76e79;
+  transform: scale(1.1);
+}
+
+/* Стиль для кнопки отправки */
+button[type="submit"] {
+  background-color: #a47864;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #b76e79;
+}
+
 /* Элемент стал видимым */
 .visible {
   opacity: 1; /* Полная видимость */
@@ -323,6 +396,24 @@ input[type="radio"]:hover + label {
   border-radius: 0 0 0 0; /* Острые углы: левый верхний и правый нижний */
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  background-color: #a47864;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #b76e79;
+}
+
 /* Медиа-запросы */
 @media (max-width: 768px) {
   .container {
@@ -359,5 +450,35 @@ input[type="radio"]:hover + label {
 
   .fade-in {
     margin: 10px 0; /* Уменьшаем отступы на мобильных устройствах */
+  }
+  .container {
+    padding: 15px;
+  }
+
+  .text-container {
+    width: 95%; /* Увеличиваем ширину текстового контейнера */
+  }
+
+  h1, h2 {
+    font-size: 24px; /* Уменьшаем размер заголовков */
+  }
+
+  p {
+    font-size: 18px; /* Уменьшаем размер основного текста */
+  }
+
+  button {
+    font-size: 14px; /* Уменьшаем размер кнопок */
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 20px; /* Для очень маленьких экранов */
+  }
+
+  .calendar-container {
+    width: 150px; /* Уменьшаем размер календаря */
   }
 }

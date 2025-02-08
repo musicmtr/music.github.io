@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приглашение на свадьбу</title>
@@ -11,66 +11,53 @@
 </head>
 <body>
     <div class="container">
-        <section class="section">
+        <!-- Главный раздел -->
+        <section class="section hero-section">
             <h1 class="poiret-one-regular">Дарья и Муслим</h1>
-            <h1 class="poiret-one-regular">ДОРОГИЕ ГОСТИ!</h1>
+            <h2 class="poiret-one-regular">ДОРОГИЕ ГОСТИ!</h2>
             <div class="text-container">
                 <p class="fade-in-top">
                     Запомните эту дату:<br>
                     <strong>11 июля 2025 года</strong>
                 </p>
                 <p class="fade-in cormorant-garamond-regular">
-                    Мы будем рады, если вы разделите с нами...
+                    Мы будем рады, если вы разделите с нами этот особенный день.
                 </p>
             </div>
-
             <div class="date-container">
-                <!-- Картинка-календарь -->
-                <div class="calendar-container">
-                    <img src="images/kalendar.png" alt="Календарь" class="calendar">
-                </div>
+                <img src="images/kalendar.png" alt="Календарь" class="calendar">
             </div>
-
             <div class="countdown-container">
-                <p class="fade-in">
-                    Запомните эту дату:<br>
-                    <strong>11 июля 2025 года</strong>
-                </p>
-                <p class="fade-in cormorant-garamond-regular">
-                    Мы будем рады, если вы разделите с нами...
-                </p>
-                <!-- Таймер -->
-                <div class="countdown-container">
-                    <span class="countdown-text fade-in">До свадьбы осталось:</span>
-                    <p id="countdown" class="timer fade-in"></p>
-                </div>
+                <span class="countdown-text fade-in">До свадьбы осталось:</span>
+                <p id="countdown" class="timer fade-in"></p>
             </div>
-
-            <p class="fade-in">В этот особенный день мы хотим оказаться в окружении самых близких и дорогих нам людей.</p>
-            <p class="fade-in">С огромным удовольствием приглашаем вас разделить с нами этот волнующий праздник.</p>
-
-            <div class="text-container">
-                <p class="fade-in">Место проведения:<br> <strong>Ресторан "Bellagio", г. Краснодар ул. Садовая, 1.</strong></p>
-            </div>
-              <!-- Расписание -->
-            <div class="schedule">
-                <p class="fade-in"><strong>10:00</strong> - свадебная церемония.</p>
-                <p class="fade-in"><strong>15:30</strong> - сбор гостей в ресторане.</p>
-                <p class="fade-in"><strong>16:00</strong> - начало банкета.</p>
-                <p class="fade-in"><strong>21:00</strong> - торт.</p>
-                <p class="fade-in"><strong>23:00</strong> - окончание праздника.</p>
-            </div>
-              <p class="fade-in">Дресс-код: мы очень ждем с удовольствием готовимся к этому незабываемому дню! Поддержите нас вашими улыбками и объятиями, а также красивыми нарядами в палитре торжества.</p>
-              <p class="fade-in">Пожелания: если вы планировали захватить с собой букетик цветов, то...</p>
-              <p class="fade-in">Будем благодарны, если вы воздержитесь от криков "Горько" на празднике, пусть поцелуи остаются выражением чувств, не по заказу.</p>
         </section>
 
-        <section class="section">
+        <!-- Информация о мероприятии -->
+        <section class="section info-section">
+            <h2>Информация о мероприятии</h2>
+            <p class="fade-in">Место проведения:<br><strong>Ресторан "Bellagio", г. Краснодар, ул. Садовая, 1.</strong></p>
+            <div class="schedule">
+                <h3>Расписание дня:</h3>
+                <ul>
+                    <li><strong>10:00</strong> - свадебная церемония.</li>
+                    <li><strong>15:30</strong> - сбор гостей в ресторане.</li>
+                    <li><strong>16:00</strong> - начало банкета.</li>
+                    <li><strong>21:00</strong> - торт.</li>
+                    <li><strong>23:00</strong> - окончание праздника.</li>
+                </ul>
+            </div>
+            <p class="fade-in">Дресс-код: мы очень ждем с удовольствием готовимся к этому незабываемому дню! Поддержите нас вашими улыбками и объятиями, а также красивыми нарядами в палитре торжества.</p>
+            <p class="fade-in">Будем благодарны, если вы воздержитесь от криков "Горько" на празднике, пусть поцелуи остаются выражением чувств, не по заказу.</p>
+        </section>
+
+        <!-- Анкета гостя -->
+        <section class="section form-section">
             <h2>Анкета гостя</h2>
             <form id="guest-form">
                 <label for="name">Ваши ФИО:</label>
                 <input type="text" id="name" name="name" required>
-
+                
                 <label>Планируете ли Вы присутствовать на свадьбе?</label>
                 <div>
                     <input type="radio" id="attend-yes" name="attendance" value="Обязательно приду" required>
@@ -131,10 +118,13 @@
                 <button type="submit">Отправить</button>
             </form>
         </section>
+
+        <!-- Кнопка "Наверх" -->
+        <a href="#" class="back-to-top">⬆️ Наверх</a>
     </div>
 
     <div class="scroll-indicator">
-      <img src="images/strelka.png" alt="Скролл вниз" class="scroll-arrow">
+        <img src="images/strelka.png" alt="Скролл вниз" class="scroll-arrow">
     </div>
 
     <script src="script.js"></script>
