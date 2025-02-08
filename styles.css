@@ -271,13 +271,12 @@ input[type="radio"]:hover + label {
 }
 
 Контейнер для картинки-календаря
-.calendar-image {
-  display: flex; /* Используем Flexbox */
-  justify-content: center; /* Центрирование по горизонтали */
+.calendar-container {
   display: inline-block; /* Делаем контейнер строчным блоком */
-  border-radius: 0 0 0 0; /* Закругляем только левый верхний и правый нижний углы */
+  border-radius: 0 0 0 0; /* Закругление углов */
   overflow: hidden; /* Обрезаем углы изображения */
-  margin: 20px 0; /* Отступы сверху и снизу */
+  width: 300px; /* Фиксированная ширина */
+  margin: 20px auto; /* Центрирование по горизонтали */
 }
 
 /* Стиль для картинки */
@@ -286,7 +285,6 @@ input[type="radio"]:hover + label {
   height: auto;
   width: 300px;
   border-radius: 0 0 0 0; /* Острые углы: левый верхний и правый нижний */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Медиа-запросы */
