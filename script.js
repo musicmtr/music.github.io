@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleBackToTop() {
         const scrollPosition = window.scrollY;
         const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
     
         // Если прокрученная часть больше половины высоты страницы, показываем кнопку
         if (scrollPosition > windowHeight * 0.5) {

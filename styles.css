@@ -415,7 +415,7 @@ input[type="radio"]:hover + label {
 
 /* Изображение стрелки */
 .back-to-top img {
-  width: 20px; /* Сделать изображение в 2 раза уже */
+  width: 30px; /* Сделать изображение в 2 раза уже */
   height: auto; /* Сохранить пропорции */
   cursor: pointer; /* Указатель мыши */
   transform: rotate(180deg) !important; /* Повернуть стрелку вверх */
