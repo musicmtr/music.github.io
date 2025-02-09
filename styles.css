@@ -397,6 +397,7 @@ input[type="radio"]:hover + label {
 }
 
 /* Кнопка "Наверх" */
+/* Кнопка "Наверх" */
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -413,11 +414,18 @@ input[type="radio"]:hover + label {
   transform: translateY(0); /* Возвращаем на место */
 }
 
+/* Изображение стрелки */
 .back-to-top img {
-  width: 40px; /* Размер стрелки */
-  height: auto;
+  width: 20px; /* Сделать изображение в 2 раза уже */
+  height: auto; /* Сохранить пропорции */
   cursor: pointer; /* Указатель мыши */
+  transform: rotate(180deg); /* Повернуть стрелку вверх */
+  transition: transform 0.3s ease; /* Плавный эффект при наведении */
 }
+
+/* Эффект при наведении */
+.back-to-top img:hover {
+  transform: rotate(180deg) scale(1.2); /* Увеличить немного при нав
 
 /* Медиа-запросы */
 @media (max-width: 768px) {
