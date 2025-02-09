@@ -396,22 +396,27 @@ input[type="radio"]:hover + label {
   border-radius: 0 0 0 0; /* Острые углы: левый верхний и правый нижний */
 }
 
+/* Кнопка "Наверх" */
 .back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
   z-index: 100;
-  background-color: #a47864;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  display: none; /* Изначально скрыта */
+  opacity: 0; /* Прозрачность */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное появление */
 }
 
-.back-to-top:hover {
-  background-color: #b76e79;
+.back-to-top.visible {
+  display: block; /* Показываем */
+  opacity: 1; /* Полная видимость */
+  transform: translateY(0); /* Возвращаем на место */
+}
+
+.back-to-top img {
+  width: 40px; /* Размер стрелки */
+  height: auto;
+  cursor: pointer; /* Указатель мыши */
 }
 
 /* Медиа-запросы */

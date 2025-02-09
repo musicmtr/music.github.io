@@ -69,10 +69,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // стрелка кнопки вверх
-    document.querySelector('.back-to-top').addEventListener('click', () => {
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    // Функция для проверки видимости кнопки
+    function toggleBackToTop() {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+    
+        // Если прокрученная часть больше половины высоты страницы, показываем кнопку
+        if (scrollPosition > windowHeight * 0.5) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    }
+    
+    // Обработчик события прокрутки
+    window.addEventListener('scroll', () => {
+        toggleBackToTop();
+    });
+    
+    // Плавная прокрутка наверх при клике на кнопку
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault(); // Предотвращаем стандартное поведение ссылки
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'smooth' // Плавная прокрутка
         });
     });
 
