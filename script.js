@@ -134,11 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
         resetShowArrowTimer(); // Запускаем новый таймер
     });
     
-    window.addEventListener('mousemove', () => {
-        hideScrollArrow(); // Сразу скрываем стрелку при движении мыши
-        resetShowArrowTimer(); // Запускаем новый таймер
-    });
-    
     // Инициализация: запускаем первый таймер
     resetShowArrowTimer();
 

@@ -417,7 +417,6 @@ input[type="radio"]:hover + label {
 .back-to-top img {
   width: 30px; /* Сделать изображение в 2 раза уже */
   height: auto; /* Сохранить пропорции */
-  cursor: pointer; /* Указатель мыши */
   transform: rotate(180deg) !important; /* Повернуть стрелку вверх */
   transition: transform 0.3s ease; /* Плавный эффект при наведении */
 }
