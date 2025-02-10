@@ -408,6 +408,7 @@ input[type="radio"]:hover + label {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+  transform: scale(0.5); /* Уменьшает изображение до 50% от исходного размера */
 }
 
 
@@ -440,11 +441,6 @@ input[type="radio"]:hover + label {
     display: block; /* Убираем лишние пробелы вокруг картинки */
   }
 
-  .calendar-container {
-    width: 200px; /* Уменьшаем размер контейнера */
-    border-radius: 15px 0 0 15px; /* Пропорционально уменьшаем радиусы */
-  }
-
   .fade-in {
     margin: 10px 0; /* Уменьшаем отступы на мобильных устройствах */
   }
@@ -470,8 +466,9 @@ input[type="radio"]:hover + label {
   }
   
   .logo {
-    width: 150px; /* Уменьшаем ширину */
+    max-width: 100%; /* Адаптивность */
     height: auto; /* Сохраняем пропорции */
+    transform: scale(0.5); /* Уменьшает изображение до 50% от исходного размера */
   }
 }
 
