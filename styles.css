@@ -5,132 +5,11 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  color: #333; /* Цвет текста */
+  color: #333;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   text-align: center;
-}
-
-/* шрифты */
-
-.cormorant-garamond.heading {
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-.cormorant-garamond.text {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.8;
-}
-
-/* Poiret One */
-.poiret-one {
-  font-family: 'Poiret One', cursive;
-}
-
-.poiret-one.heading {
-  font-size: 24px;
-  font-weight: normal;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.poiret-one.text {
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-/* Tenor Sans */
-.tenor-sans {
-  font-family: 'Tenor Sans', sans-serif;
-}
-
-.tenor-sans.heading {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.tenor-sans.text {
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-/* Класс для расписания */
-.schedule {
-  text-align: left; /* Выравнивание по левому краю */
-  margin-left: auto; /* Отступ слева (для визуального разделения) */
-  margin-right: auto; /* Отступ справа */
-  max-width: 500px; /* Ограничиваем ширину блока */
-  padding-left: 20px; /* Добавляем небольшой отступ слева для оформления */
-}
-
-/* Основной текст */
-p {
-  font-family: "Cormorant Garamond", serif; /* Используем Cormorant Garamond */
-  font-size: 22px;
-  line-height: 1.4;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-/* Контейнер для основного текста */
-.text-container {
-  width: 60%; /* Ширина 60% от родительского контейнера */
-  margin: 0 auto; /* Центрируем по горизонтали */
-  text-align: center; /* Выравниваем текст по ширине */
-}
-
-/* Акцентные слова */
-strong {
-  font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
-  font-size: 26px;
-  color: #caac77;
-}
-
-/* Текстовое поле для даты */
-.date-container {
-  text-align: center; /* Центрирование содержимого */
-  margin: 20px auto; /* Отступы и центрирование по горизонтали */
-  width: 100%; /* Занимает всю доступную ширину */
-  display: flex; /* Используем Flexbox */
-  justify-content: center; /* Центрируем внутренний контент */
-  align-items: center; /* Центрируем вертикально (если нужно) */
-}
-
-/* Таймер */
-.timer {
-  font-size: 26px;
-  font-weight: bold;
-  color: #caac77;
-  text-align: center;
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Текст "До свадьбы осталось:" */
-#countdown span {
-  display: block; /* Каждая строка на новой строке */
-  font-family: "Cormorant Garamond", serif; /* Шрифт Cormorant Garamond */
-  font-size: 24px; /* Размер шрифта */
-  font-weight: normal; /* Обычный стиль */
-  color: #333; /* Цвет текста */
-  margin-bottom: 5px; /* Отступ между строками */
-}
-
-/* Время таймера */
-#countdown strong {
-  font-family: "Cormorant Garamond", serif; /* Шрифт Cormorant Garamond */
-  font-size: 26px; /* Размер шрифта */
-  font-weight: 700; /* Жирный стиль */
-  color: #caac77; /* Акцентный цвет */
 }
 
 /* Контейнер */
@@ -145,12 +24,28 @@ strong {
 
 /* Заголовки */
 h1, h2 {
-  font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
+  font-family: "Poiret One", cursive;
   color: #caac77;
   font-size: 36px;
 }
 
-/* Кнопки с шрифтом Marck Script */
+/* Основной текст */
+p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Акцентные слова */
+strong {
+  font-family: "Poiret One", cursive;
+  font-size: 26px;
+  color: #caac77;
+}
+
+/* Кнопки */
 button {
   font-family: "Cormorant Garamond", cursive;
   font-size: 18px;
@@ -167,246 +62,17 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Отступы между секциями */
-.section {
-  margin-bottom: 20px;
-}
-
-/* Стиль для плавного появления текста */
+/* Анимация появления */
 .fade-in {
-  text-align: justify; /* Выравниваем текст по ширине */
-  /* margin-bottom: 20px; Отступ между элементами */
-  opacity: 0; /* Начальная прозрачность */
-  transform: translateY(30px); /* Начальный сдвиг */
-  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.5s */
-              transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-/* Контейнер для таймера */
-.countdown-container {
-  display: flex; /* Используем Flexbox */
-  flex-direction: column; /* Вертикальное расположение элементов */
-  align-items: center; /* Центрируем содержимое по горизонтали */
-  justify-content: center; /* Центрируем содержимое по вертикали (если нужно) */
-  margin: 20px auto; /* Отступы и центрирование самого контейнера */
-}
-
-/* Текст "До свадьбы осталось:" */
-.countdown-text {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 24px; /* Размер шрифта */
-  color: #333; /* Цвет текста */
-}
-
-/* Анимация появления сверху */
-.fade-in-top {
   opacity: 0;
-  transform: translateY(-30px); /* Сдвиг вверх */
-  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.5s */
-              transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-/* Анимация появления снизу */
-.fade-in-bottom {
-  opacity: 0;
-  transform: translateY(30px); /* Сдвиг вниз */
-  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), /* Увеличиваем длительность до 1.5s */
-              transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-/* Эффект исчезновения */
-.fade-out {
-  opacity: 0; /* Полная прозрачность */
-  transform: translateY(-40px); /* Сдвигаем элемент вверх */
-  transition: opacity 1s ease-out, transform 1s ease-out; /* Плавный переход */
-}
-
-/* Плавное появление с левой стороны */
-.fade-in-left {
-  opacity: 0;
-  transform: translateX(-30px);
+  transform: translateY(30px);
   transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Плавное появление с правой стороны */
-.fade-in-right {
-  opacity: 0;
-  transform: translateX(30px);
-  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-
-/* Общий стиль для полей ввода */
-input[type="text"],
-input[type="radio"],
-input[type="checkbox"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-bottom: 10px;
-  width: 100%;
-  max-width: 400px;
-}
-
-/* Стиль для радиокнопок и чекбоксов */
-input[type="radio"] + label,
-input[type="checkbox"] + label {
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-/* Активное состояние для радиокнопок и чекбоксов */
-input[type="radio"]:checked + label,
-input[type="checkbox"]:checked + label {
-  color: #caac77;
-  font-weight: bold;
-}
-
-a {
-  color: #caac77;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-  color: #b76e79;
-  transform: scale(1.1);
-}
-
-/* Стиль для кнопки отправки */
-button[type="submit"] {
-  background-color: #caac77;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 18px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: #b76e79;
-}
-
-/* Элемент стал видимым */
 .visible {
-  opacity: 1; /* Полная видимость */
-  transform: translateY(0); /* Возвращаем на место */
-  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), /* Сохраняем плавный переход */
-              transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 1;
+  transform: translateY(0);
 }
-
-/* Форма */
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-label {
-  font-weight: bold;
-}
-
-/* Подсветка активных полей */
-input[type="text"]:focus {
-  outline: none;
-  border: 2px solid #c25a7c;
-  box-shadow: 0 0 5px rgba(194, 90, 124, 0.5);
-}
-
-input[type="checkbox"]:focus + label,
-input[type="radio"]:focus + label {
-  color: #c25a7c;
-  font-weight: bold;
-}
-
-input[type="checkbox"]:hover + label,
-input[type="radio"]:hover + label {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-/* Стрелка для скролла */
-.scroll-indicator {
-  position: fixed; /* Фиксированное положение */
-  bottom: 20px; /* Расположение внизу экрана */
-  left: 50%; /* Центрирование по горизонтали */
-  transform: translateX(-50%); /* Точное центрирование */
-  z-index: 100; /* Поверх остальных элементов */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.scroll-arrow {
-  width: 50px; /* Размер стрелки */
-  height: auto;
-  opacity: 0.8; /* Лёгкая прозрачность */
-  animation: bounce 2s infinite ease-in-out; /* Анимация подпрыгивания */
-}
-
-/* Анимация подпрыгивания */
-@keyframes bounce {
-  0%, 100% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-10px); /* Подпрыгивание на 10 пикселей */
-  }
-}
-
-/* Контейнер для картинки-календаря */
-.calendar-container {
-  display: inline-block; /* Делаем контейнер строчным блоком */
-  border-radius: 0 0 0 0; /* Закругление углов */
-  overflow: hidden; /* Обрезаем углы изображения */
-  width: 300px; /* Фиксированная ширина */
-}
-
-/* Стиль для картинки */
-.calendar {
-  max-width: 100%;
-  height: auto;
-  width: 300px;
-  border-radius: 0 0 0 0; /* Острые углы: левый верхний и правый нижний */
-}
-
-/* Кнопка "Наверх" */
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  display: none; /* Изначально скрыта */
-  opacity: 0; /* Прозрачность */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное появление */
-}
-
-.back-to-top.visible {
-  display: block; /* Показываем */
-  opacity: 1; /* Полная видимость */
-  transform: translateY(0); /* Возвращаем на место */
-}
-
-/* Изображение стрелки */
-.back-to-top img {
-  width: 30px; /* Сделать изображение в 2 раза уже */
-  height: auto; /* Сохранить пропорции */
-  transform: rotate(180deg) !important; /* Повернуть стрелку вверх */
-  transition: transform 0.3s ease; /* Плавный эффект при наведении */
-}
-
-/* Стили для контейнера логотипа */
-.logo-container {
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  transform: scale(0.5); /* Уменьшает изображение до 50% от исходного размера */
-}
-
 
 /* Медиа-запросы */
 @media (max-width: 768px) {
@@ -414,74 +80,22 @@ input[type="radio"]:hover + label {
     padding: 15px;
   }
 
-  .text-container {
-    width: 90%; /* На мобильных устройствах увеличиваем ширину до 90% */
-  }
-
   h1, h2 {
     font-size: 28px;
   }
 
-  #countdown {
-    font-size: 20px;
+  p {
+    font-size: 18px;
   }
 
   button {
     font-size: 16px;
     padding: 8px 15px;
   }
-
-  .calendar {
-    max-width: 100%; /* Адаптивность */
-    height: auto; /* Сохраняем пропорции */
-    display: block; /* Убираем лишние пробелы вокруг картинки */
-  }
-
-  .fade-in {
-    margin: 10px 0; /* Уменьшаем отступы на мобильных устройствах */
-  }
-  .container {
-    padding: 15px;
-  }
-
-  .text-container {
-    width: 95%; /* Увеличиваем ширину текстового контейнера */
-  }
-
-  h1, h2 {
-    font-size: 24px; /* Уменьшаем размер заголовков */
-  }
-
-  p {
-    font-size: 18px; /* Уменьшаем размер основного текста */
-  }
-
-  button {
-    font-size: 14px; /* Уменьшаем размер кнопок */
-    padding: 8px 16px;
-  }
-  
-  .logo {
-    max-width: 100%; /* Адаптивность */
-    height: auto; /* Сохраняем пропорции */
-    margin: 0px; /* Настройте по необходимости */
-    transform: scale(0.5); /* Уменьшает изображение до 50% от исходного размера */
-  }
 }
 
 @media (max-width: 480px) {
   h1, h2 {
-    font-size: 20px; /* Для очень маленьких экранов */
-  }
-
-  .calendar-container {
-    width: 150px; /* Уменьшаем размер календаря */
-  }
-
-  .logo {
-    max-width: 100%; /* Адаптивность */
-    height: auto; /* Сохраняем пропорции */
-    margin: 0px; /* Настройте по необходимости */
-    transform: scale(0.8); /* Уменьшает изображение до 50% от исходного размера */
+    font-size: 20px;
   }
 }
