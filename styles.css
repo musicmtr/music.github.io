@@ -41,7 +41,7 @@ p {
 
 /* Акцентные слова */
 strong {
-  font-family: "Cormorant Garamond", serif; /* Акцентный шрифт Poiret One */
+  font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
   font-size: 26px;
   color: #caac77;
   text-align: center; /* Выравниваем текст по ширине */
