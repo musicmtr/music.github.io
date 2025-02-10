@@ -45,7 +45,7 @@ strong {
   font-size: 26px;
   color: #caac77;
   text-align: center; /* Выравниваем текст по ширине */
-  margin-left: 10px;
+  margin-left: -12px;
 }
 
 /* Текстовое поле для даты */
@@ -143,7 +143,7 @@ button:hover {
   flex-direction: column; /* Вертикальное расположение элементов */
   align-items: center; /* Центрируем содержимое по горизонтали */
   justify-content: center; /* Центрируем содержимое по вертикали (если нужно) */
-  margin: 20px auto; /* Отступы и центрирование самого контейнера */
+  margin: 10px auto; /* Отступы и центрирование самого контейнера */
 }
 
 /* Текст "До свадьбы осталось:" */
@@ -151,6 +151,7 @@ button:hover {
   font-family: "Cormorant Garamond", serif;
   font-size: 24px; /* Размер шрифта */
   color: #333; /* Цвет текста */
+  font-weight: bold;
 }
 
 /* Анимация появления сверху */
@@ -397,10 +398,6 @@ input[type="radio"]:hover + label {
   }
   .container {
     padding: 15px;
-  }
-
-  .text-container {
-    width: 95%; /* Увеличиваем ширину текстового контейнера */
   }
 
   h1, h2 {
