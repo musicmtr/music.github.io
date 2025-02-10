@@ -45,6 +45,7 @@ strong {
   font-size: 26px;
   color: #caac77;
   text-align: center; /* Выравниваем текст по ширине */
+  margin-left: 10px;
 }
 
 /* Текстовое поле для даты */
