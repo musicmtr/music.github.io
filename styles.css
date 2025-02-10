@@ -23,14 +23,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Основной текст */
-p {
-  font-family: "Cormorant Garamond", serif; /* Используем Cormorant Garamond */
-  font-size: 22px;
-  line-height: 1.4;
-  margin-bottom: 15px;
-  color: #333;
-}
+ы
 
 /* Контейнер для основного текста */
 .text-container {
@@ -139,6 +132,7 @@ button:hover {
 
 /* Контейнер для таймера */
 .countdown-container {
+  font-family: 'Poiret One', cursive;
   display: flex; /* Используем Flexbox */
   flex-direction: column; /* Вертикальное расположение элементов */
   align-items: center; /* Центрируем содержимое по горизонтали */
