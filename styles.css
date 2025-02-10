@@ -401,7 +401,6 @@ input[type="radio"]:hover + label {
 
 /* Стили для контейнера логотипа */
 .logo-container {
-  display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
