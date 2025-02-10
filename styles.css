@@ -13,77 +13,52 @@ body {
 }
 
 /* шрифты */
-.tenor-sans-regular {
-  font-family: "Tenor Sans", serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-.cormorant-garamond-light {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.cormorant-garamond-regular {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.cormorant-garamond-medium {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.cormorant-garamond-semibold {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.cormorant-garamond-bold {
-  font-family: "Cormorant Garamond", serif;
+.cormorant-garamond.heading {
+  font-size: 24px;
   font-weight: 700;
-  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
-.cormorant-garamond-light-italic {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.cormorant-garamond-regular-italic {
-  font-family: "Cormorant Garamond", serif;
+.cormorant-garamond.text {
+  font-size: 16px;
   font-weight: 400;
-  font-style: italic;
+  line-height: 1.8;
 }
 
-.cormorant-garamond-medium-italic {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  font-style: italic;
+/* Poiret One */
+.poiret-one {
+  font-family: 'Poiret One', cursive;
 }
 
-.cormorant-garamond-semibold-italic {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-  font-style: italic;
+.poiret-one.heading {
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.cormorant-garamond-bold-italic {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  font-style: italic;
+.poiret-one.text {
+  font-size: 16px;
+  line-height: 1.8;
 }
 
-.poiret-one-regular {
-  font-family: "Poiret One", serif;
-  font-size: 28px;
-  font-weight: 400;
-  font-style: normal;
+/* Tenor Sans */
+.tenor-sans {
+  font-family: 'Tenor Sans', sans-serif;
+}
+
+.tenor-sans.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tenor-sans.text {
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 /* Класс для расписания */
@@ -425,6 +400,19 @@ input[type="radio"]:hover + label {
   height: auto; /* Сохранить пропорции */
   transform: rotate(180deg) !important; /* Повернуть стрелку вверх */
   transition: transform 0.3s ease; /* Плавный эффект при наведении */
+}
+
+/* Стили для контейнера логотипа */
+.logo-container {
+  display: flex;
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: center; /* Вертикальное центрирование */
+  margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.logo {
+  max-width: 100%; /* Чтобы логотип не выходил за пределы контейнера */
+  height: auto; /* Сохраняет пропорции изображения */
 }
 
 /* Медиа-запросы */
