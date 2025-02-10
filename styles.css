@@ -90,7 +90,7 @@ p {
 strong {
   font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
   font-size: 28px;
-  color: #a48d64;
+  color: #caac77;
 }
 
 /* Текстовое поле для даты */
@@ -107,7 +107,7 @@ strong {
 .timer {
   font-size: 26px;
   font-weight: bold;
-  color: #a48d64;
+  color: #caac77;
   text-align: center;
   margin: 20px 0;
   display: flex;
@@ -130,7 +130,7 @@ strong {
   font-family: "Cormorant Garamond", serif; /* Шрифт Cormorant Garamond */
   font-size: 26px; /* Размер шрифта */
   font-weight: 700; /* Жирный стиль */
-  color: #a48d64; /* Акцентный цвет */
+  color: #caac77; /* Акцентный цвет */
 }
 
 /* Контейнер */
@@ -146,7 +146,7 @@ strong {
 /* Заголовки */
 h1, h2 {
   font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
-  color: #a48d64;
+  color: #caac77;
   font-size: 36px;
   text-shadow: 
     2px 2px 5px rgba(0, 0, 0, 0.2),
@@ -158,7 +158,7 @@ button {
   font-family: "Cormorant Garamond", cursive;
   font-size: 18px;
   color: white;
-  background-color: #a48d64;
+  background-color: #caac77;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -262,12 +262,12 @@ input[type="checkbox"] + label {
 /* Активное состояние для радиокнопок и чекбоксов */
 input[type="radio"]:checked + label,
 input[type="checkbox"]:checked + label {
-  color: #a48d64;
+  color: #caac77;
   font-weight: bold;
 }
 
 a {
-  color: #a48d64;
+  color: #caac77;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -279,7 +279,7 @@ a:hover {
 
 /* Стиль для кнопки отправки */
 button[type="submit"] {
-  background-color: #a48d64;
+  background-color: #caac77;
   color: white;
   border: none;
   padding: 12px 24px;
