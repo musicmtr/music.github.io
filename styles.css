@@ -148,9 +148,6 @@ h1, h2 {
   font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
   color: #caac77;
   font-size: 36px;
-  text-shadow: 
-    2px 2px 5px rgba(0, 0, 0, 0.2),
-    -1px -1px 5px rgba(255, 255, 255, 0.5);
 }
 
 /* Кнопки с шрифтом Marck Script */
@@ -469,7 +466,7 @@ input[type="radio"]:hover + label {
     max-width: 100%; /* Адаптивность */
     height: auto; /* Сохраняем пропорции */
     margin: 0px; /* Настройте по необходимости */
-    transform: scale(0.8); /* Уменьшает изображение до 50% от исходного размера */
+    transform: scale(0.5); /* Уменьшает изображение до 50% от исходного размера */
   }
 }
 
