@@ -470,6 +470,11 @@ input[type="radio"]:hover + label {
     font-size: 14px; /* Уменьшаем размер кнопок */
     padding: 8px 16px;
   }
+  
+  .logo {
+    width: 200px; /* Уменьшаем размер контейнера */
+    border-radius: 15px 0 0 15px; /* Пропорционально уменьшаем радиусы */
+  }
 }
 
 @media (max-width: 480px) {
@@ -479,10 +484,5 @@ input[type="radio"]:hover + label {
 
   .calendar-container {
     width: 150px; /* Уменьшаем размер календаря */
-  }
-
-  .logo {
-    width: 200px; /* Уменьшаем размер контейнера */
-    border-radius: 15px 0 0 15px; /* Пропорционально уменьшаем радиусы */
   }
 }
