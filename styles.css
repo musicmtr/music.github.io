@@ -406,7 +406,7 @@ input[type="radio"]:hover + label {
 .logo-container {
   text-align: center; /* Центрирование содержимого */
   margin: 20px auto; /* Отступы и центрирование по горизонтали */
-  width: 100%; /* Занимает всю доступную ширину */
+  width: 50%; /* Занимает всю доступную ширину */
   display: flex; /* Используем Flexbox */
   justify-content: center; /* Центрируем внутренний контент */
   align-items: center; /* Центрируем вертикально (если нужно) */
