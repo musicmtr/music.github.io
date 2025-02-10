@@ -404,10 +404,12 @@ input[type="radio"]:hover + label {
 
 /* Стили для контейнера логотипа */
 .logo-container {
-    display: flex;
-    justify-content: center; /* Горизонтальное центрирование */
-    align-items: center; /* Вертикальное центрирование */
-    margin: 20px 0; /* Отступы сверху и снизу */
+  text-align: center; /* Центрирование содержимого */
+  margin: 20px auto; /* Отступы и центрирование по горизонтали */
+  width: 100%; /* Занимает всю доступную ширину */
+  display: flex; /* Используем Flexbox */
+  justify-content: center; /* Центрируем внутренний контент */
+  align-items: center; /* Центрируем вертикально (если нужно) */
 }
 
 
@@ -480,7 +482,7 @@ input[type="radio"]:hover + label {
   }
 
   .logo {
-    max-width: 100%; /* Чтобы логотип не выходил за пределы контейнера */
-    height: auto; /* Сохраняет пропорции изображения */
+    width: 200px; /* Уменьшаем размер контейнера */
+    border-radius: 15px 0 0 15px; /* Пропорционально уменьшаем радиусы */
   }
 }
