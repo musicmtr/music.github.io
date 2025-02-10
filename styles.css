@@ -404,16 +404,12 @@ input[type="radio"]:hover + label {
 
 /* Стили для контейнера логотипа */
 .logo-container {
-  display: flex;
-  justify-content: center; /* Горизонтальное центрирование */
-  align-items: center; /* Вертикальное центрирование */
-  margin: 20px 0; /* Отступы сверху и снизу */
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+    margin: 20px 0; /* Отступы сверху и снизу */
 }
 
-.logo {
-  max-width: 100%; /* Чтобы логотип не выходил за пределы контейнера */
-  height: auto; /* Сохраняет пропорции изображения */
-}
 
 /* Медиа-запросы */
 @media (max-width: 768px) {
@@ -481,5 +477,10 @@ input[type="radio"]:hover + label {
 
   .calendar-container {
     width: 150px; /* Уменьшаем размер календаря */
+  }
+
+  .logo {
+    max-width: 100%; /* Чтобы логотип не выходил за пределы контейнера */
+    height: auto; /* Сохраняет пропорции изображения */
   }
 }
