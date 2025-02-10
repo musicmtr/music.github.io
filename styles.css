@@ -468,6 +468,7 @@ input[type="radio"]:hover + label {
   .logo {
     max-width: 100%; /* Адаптивность */
     height: auto; /* Сохраняем пропорции */
+    margin: 10px 0; /* Настройте по необходимости */
     transform: scale(0.8); /* Уменьшает изображение до 50% от исходного размера */
   }
 }
@@ -479,5 +480,12 @@ input[type="radio"]:hover + label {
 
   .calendar-container {
     width: 150px; /* Уменьшаем размер календаря */
+  }
+
+  .logo {
+    max-width: 100%; /* Адаптивность */
+    height: auto; /* Сохраняем пропорции */
+    margin: 10px 0; /* Настройте по необходимости */
+    transform: scale(0.8); /* Уменьшает изображение до 50% от исходного размера */
   }
 }
