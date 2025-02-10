@@ -89,7 +89,7 @@ p {
 /* Акцентные слова */
 strong {
   font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
-  font-size: 28px;
+  font-size: 26px;
   color: #caac77;
 }
 
@@ -136,7 +136,7 @@ strong {
 /* Контейнер */
 .container {
   max-width: 800px;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 20px;
   background: rgba(255, 255, 250, 0.9);
   border-radius: 10px;
@@ -169,7 +169,7 @@ button:hover {
 
 /* Отступы между секциями */
 .section {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 /* Стиль для плавного появления текста */
