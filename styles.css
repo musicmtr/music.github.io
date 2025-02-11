@@ -35,7 +35,7 @@ body {
 /* Акцентные слова */
 strong {
   font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
-  font-size: 26px;
+  font-size: 27px;
   color: #caac77;
   text-align: center; /* Выравниваем текст по ширине */
   margin-left: -12px;
@@ -53,7 +53,6 @@ strong {
 
 /* Таймер */
 .timer {
-  font-family: 'Poiret One', cursive !important;  
   font-size: 26px;
   font-weight: bold;
   color: #caac77;
@@ -77,7 +76,7 @@ strong {
 /* Время таймера */
 #countdown strong {
   font-family: "Poiret One", cursive; /* Шрифт Cormorant Garamond */
-  font-size: 26px; /* Размер шрифта */
+  font-size: 27px; /* Размер шрифта */
   font-weight: 700; /* Жирный стиль */
   color: #caac77; /* Акцентный цвет */
 }
