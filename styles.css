@@ -23,9 +23,7 @@ body {
   margin-bottom: 10px;
 }
 
-.cormorant-garamond {
-  font-family: "Cormorant Garamond", serif;
-}
+ы
 
 /* Контейнер для основного текста */
 .text-container {
@@ -55,7 +53,6 @@ strong {
 
 /* Таймер */
 .timer {
-  font-family: 'Poiret One', cursive;
   font-size: 26px;
   font-weight: bold;
   color: #caac77;
@@ -145,6 +142,7 @@ button:hover {
 
 /* Текст "До свадьбы осталось:" */
 .countdown-text {
+  font-family: "Cormorant Garamond", serif;
   font-size: 24px; /* Размер шрифта */
   color: #333; /* Цвет текста */
   font-weight: bold;
