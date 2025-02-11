@@ -138,11 +138,13 @@ button:hover {
   align-items: center; /* Центрируем содержимое по горизонтали */
   justify-content: center; /* Центрируем содержимое по вертикали (если нужно) */
   margin: 10px auto; /* Отступы и центрирование самого контейнера */
+  text-align: center; /* Центрирует текст */
 }
 
 /* Текст "До свадьбы осталось:" */
 .countdown-text {
   font-family: "Cormorant Garamond", serif;
+  text-align: center; /* Центрирует текст */
   font-size: 24px; /* Размер шрифта */
   color: #333; /* Цвет текста */
   font-weight: bold;
