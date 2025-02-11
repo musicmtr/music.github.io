@@ -53,6 +53,7 @@ strong {
 
 /* Таймер */
 .timer {
+  font-family: 'Poiret One', cursive !important;  
   font-size: 26px;
   font-weight: bold;
   color: #caac77;
