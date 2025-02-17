@@ -371,6 +371,7 @@ input[type="radio"]:hover + label {
   .text-container {
     width: 80%; /* На мобильных устройствах увеличиваем ширину до 90% */
     margin: 0 auto;
+    text-align: justify;
   }
 
   h1, h2 {
