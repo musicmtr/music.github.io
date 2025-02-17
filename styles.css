@@ -359,6 +359,17 @@ input[type="radio"]:hover + label {
   transform: scale(0.5); /* Уменьшает изображение до 50% от исходного размера */
 }
 
+ul {
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем внутренние отступы */
+}
+
+li {
+  display: flex; /* Превращаем каждый элемент списка в flex-контейнер */
+  align-items: center; /* Выравниваем содержимое по вертикали */
+  margin-bottom: 10px; /* Добавляем отступ между пунктами */
+}
+
 
 /* Медиа-запросы */
 @media (max-width: 768px) {
@@ -406,7 +417,6 @@ input[type="radio"]:hover + label {
 
   p {
     font-size: 18px; /* Уменьшаем размер основного текста */
-    text-align: left;
   }
 
   button {
