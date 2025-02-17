@@ -362,15 +362,13 @@ input[type="radio"]:hover + label {
 ul {
   list-style-type: none; /* Убираем маркеры списка */
   padding: 0; /* Убираем внутренние отступы */
-  text-align: center;
-  
 }
 
 li {
   display: flex; /* Превращаем каждый элемент списка в flex-контейнер */
   align-items: center; /* Выравниваем содержимое по вертикали */
   margin-bottom: 10px; /* Добавляем отступ между пунктами */
-  margin-left: 3px; /* Добавляем отступ между пунктами */
+  text-align: center;
 }
 
 
