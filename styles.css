@@ -423,7 +423,7 @@ input[type="radio"]:hover + label {
 
 @media (max-width: 480px) {
   h1, h2 {
-    font-size: 20px; /* Для очень маленьких экранов */
+    font-size: 28px; /* Для очень маленьких экранов */
   }
 
   .calendar-container {
