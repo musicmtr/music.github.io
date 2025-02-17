@@ -36,7 +36,6 @@ strong {
   font-size: 25px;
   color: #caac77;
   text-align: center; /* Выравниваем текст по ширине */
-  margin-left: auto;
 }
 
 /* Текстовое поле для даты */
@@ -372,15 +371,21 @@ li {
 
 /* Центрирование всего блока .schedule */
 .schedule {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+.invisible-spacer {
+  height: 20px; /* Высота отступа (можно изменить) */
+  width: 100%; /* Занимает всю доступную ширину */
+  opacity: 0; /* Полная прозрачность */
+  pointer-events: none; /* Отключает взаимодействие с мышью */
+}
 
 /* Медиа-запросы */
 @media (max-width: 768px) {
