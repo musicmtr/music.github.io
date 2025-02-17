@@ -393,9 +393,6 @@ input[type="radio"]:hover + label {
     display: block; /* Убираем лишние пробелы вокруг картинки */
   }
 
-  .fade-in {
-    margin: 10px 0; /* Уменьшаем отступы на мобильных устройствах */
-  }
   .container {
     padding: 15px;
   }
