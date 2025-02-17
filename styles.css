@@ -23,8 +23,6 @@ body {
   margin-bottom: 10px;
 }
 
-ы
-
 /* Контейнер для основного текста */
 .text-container {
   width: 70%; /* Ширина 60% от родительского контейнера */
@@ -404,6 +402,7 @@ input[type="radio"]:hover + label {
 
   p {
     font-size: 18px; /* Уменьшаем размер основного текста */
+    text-align: left;
   }
 
   button {
