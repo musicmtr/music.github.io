@@ -407,8 +407,6 @@ input[type="radio"]:hover + label {
   p {
     font-size: 18px; /* Уменьшаем размер основного текста */
     text-align: left;
-    display: flex; /* Включаем Flexbox */
-    align-items: center; /* Центрируем содержимое по вертикали */
   }
 
   button {
