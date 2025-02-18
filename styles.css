@@ -386,6 +386,7 @@ input[type="radio"]:hover + label {
 ul {
   list-style-type: none; /* Убираем маркеры списка */
   padding: 0; /* Убираем внутренние отступы */
+  margin-top: 10px;
 }
 
 li {
