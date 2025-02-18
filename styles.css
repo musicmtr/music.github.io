@@ -140,7 +140,7 @@ button:hover {
 
 /* Текст "До свадьбы осталось:" */
 .countdown-text {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Poiret One', serif;
   text-align: center; /* Центрирует текст */
   font-size: 24px; /* Размер шрифта */
   color: #333; /* Цвет текста */
