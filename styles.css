@@ -95,6 +95,14 @@ h1, h2 {
   font-size: 36px;
 }
 
+/* Заголовки */
+h3 {
+  font-family: "Cormorant Garamond", serif; /* Шрифт Cormorant Garamond */
+  font-size: 22px; /* Размер шрифта */
+  font-weight: normal; /* Обычный стиль */
+  color: #333; /* Цвет текста */
+}
+
 /* Кнопки с шрифтом Marck Script */
 button {
   font-family: "Cormorant Garamond", cursive;
