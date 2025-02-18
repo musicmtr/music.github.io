@@ -161,7 +161,7 @@ button:hover {
 .countdown-text {
   font-family: 'Poiret One', serif;
   text-align: center; /* Центрирует текст */
-  font-size: 24px; /* Размер шрифта */
+  font-size: 22px; /* Размер шрифта */
   color: #333; /* Цвет текста */
   font-weight: bold;
   width: auto; /* Динамическая ширина */
