@@ -422,6 +422,20 @@ input[type="radio"]:hover + label {
   margin-bottom: 20px;
 }
 
+/* Стили для внешнего контейнера */
+.dress-container {
+  border: 10px solid #caac77; /* Обрамление цветом #caac77 */
+  background-color: #f9f6f2; /* Фоновый цвет для контейнера */
+  padding: 20px; /* Внутренние отступы */
+  display: flex;
+  justify-content: center; /* Центрирование содержимого по горизонтали */
+  align-items: center; /* Центрирование содержимого по вертикали */
+  margin: 20px auto; /* Отступы сверху и снизу, выравнивание по центру */
+  max-width: 500px; /* Максимальная ширина контейнера */
+  box-sizing: border-box; /* Учитываем padding и border в ширине */
+  border-radius: 10px; /* Скругление углов */
+}
+
 /* Стили для картинки дресскода*/
 .dress {
   max-width: 100%; /* Ограничиваем ширину картинки */
