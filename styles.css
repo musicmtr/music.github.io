@@ -423,6 +423,17 @@ input[type="radio"]:hover + label {
   margin-bottom: 20px;
 }
 
+.location-link {
+  color: #caac77; /* Цвет текста ссылки */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-weight: bold; /* Жирный шрифт */
+  transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.location-link:hover {
+  color: #b29463; /* Цвет текста при наведении */
+}
+
 /* Стили для фоновой картинки */
 .fon {
   display: block; /* Убираем лишние отступы */
