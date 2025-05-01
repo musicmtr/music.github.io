@@ -133,20 +133,6 @@ strong {
   box-sizing: border-box;
 }
 
-.remove-btn {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.remove-btn:hover {
-  background-color: #cc0000;
-}
-
 #add-guest {
   background-color: #caac77;
   color: white;
@@ -357,13 +343,13 @@ label {
 /* Подсветка активных полей */
 input[type="text"]:focus {
   outline: none;
-  border: 2px solid #c25a7c;
-  box-shadow: 0 0 5px rgba(194, 90, 124, 0.5);
+  border: 2px solid #b3d16c;
+  box-shadow: 0 0 5px rgba(182, 223, 106, 0.5);
 }
 
 input[type="checkbox"]:focus + label,
 input[type="radio"]:focus + label {
-  color: #c25a7c;
+  color: #b3d16c;
   font-weight: bold;
 }
 
