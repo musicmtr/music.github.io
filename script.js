@@ -137,36 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Инициализация: запускаем первый таймер
     resetShowArrowTimer();
 
-    // Обработчик формы
-    const form = document.getElementById('guest-form');
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-    
-        const name = form.querySelector('#name').value.trim();
-        const attendance = form.querySelector('input[name="attendance"]:checked');
-        const food = form.querySelector('input[name="food"]:checked');
-    
-        if (!name || !attendance || !food) {
-            alert('Пожалуйста, заполните все обязательные поля!');
-            return;
-        }
-    
-        const formData = new FormData(form);
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
-    
-        console.log(data); // Здесь можно отправить данные на сервер
-    
-        // Показать сообщение об успехе
-        alert('Спасибо за вашу анкету! Мы ждем вас на свадьбе.');
-    
-        // Сбросить форму
-        form.reset();
-    });
-
     // Это уже кнопка отправить в телеграмм
     document.getElementById('guest-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Предотвращаем стандартную отправку формы
