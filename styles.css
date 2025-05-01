@@ -422,7 +422,14 @@ input[type="radio"]:hover + label {
   margin-bottom: 20px;
 }
 
-/* Стили для внешнего контейнера */
+/* Стили для фоновой картинки */
+.fon {
+  display: block; /* Убираем лишние отступы */
+  width: 100%; /* Делаем картинку адаптивной по ширине */
+  height: auto; /* Сохраняем пропорции */
+}
+
+/* Стили для картинки */
 .dress-container {
   border: 10px solid #caac77; /* Обрамление цветом #caac77 */
   background-color: #f9f6f2; /* Фоновый цвет для контейнера */
@@ -434,14 +441,6 @@ input[type="radio"]:hover + label {
   max-width: 500px; /* Максимальная ширина контейнера */
   box-sizing: border-box; /* Учитываем padding и border в ширине */
   border-radius: 10px; /* Скругление углов */
-}
-
-/* Стили для картинки дресскода*/
-.dress {
-  max-width: 100%; /* Ограничиваем ширину картинки */
-  height: auto; /* Сохраняем пропорции */
-  transform: rotate(90deg); /* Поворачиваем картинку на 90 градусов */
-  transform-origin: center; /* Задаем точку вращения (центр картинки) */
 }
 
 ul {
