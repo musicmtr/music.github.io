@@ -446,7 +446,6 @@ input[type="radio"]:hover + label {
 .dress {
   max-width: 100%; /* Ограничиваем ширину картинки */
   height: auto; /* Сохраняем пропорции */
-  transform: rotate(90deg); /* Поворот на 90 градусов (если нужен) */
   transform-origin: center; /* Точка вращения в центре */
 }
 
@@ -492,7 +491,7 @@ li {
   .dress {
     max-width: 100%; /* Картинка всегда подстраивается под ширину экрана */
   }
-  
+
   .container {
     padding: 15px;
   }
