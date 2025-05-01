@@ -485,6 +485,14 @@ li {
     line-height: 1;
   }
 
+  .dress-container {
+    padding: 10px; /* Уменьшаем отступы на маленьких экранах */
+  }
+
+  .dress {
+    max-width: 100%; /* Картинка всегда подстраивается под ширину экрана */
+  }
+  
   .container {
     padding: 15px;
   }
