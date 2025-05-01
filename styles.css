@@ -328,13 +328,13 @@ label {
 /* Подсветка активных полей */
 input[type="text"]:focus {
   outline: none;
-  border: 2px solid #b3d16c;
+  border: 2px solid #caac77;
   box-shadow: 0 0 5px rgba(182, 223, 106, 0.5);
 }
 
 input[type="checkbox"]:focus + label,
 input[type="radio"]:focus + label {
-  color: #b3d16c;
+  color: #caac77;
   font-weight: bold;
 }
 
@@ -422,11 +422,12 @@ input[type="radio"]:hover + label {
   margin-bottom: 20px;
 }
 
-/* Стили для фоновой картинки */
-.fon {
-  display: block; /* Убираем лишние отступы */
-  width: 100%; /* Делаем картинку адаптивной по ширине */
+/* Стили для картинки дресскода*/
+.dress {
+  max-width: 100%; /* Ограничиваем ширину картинки */
   height: auto; /* Сохраняем пропорции */
+  transform: rotate(90deg); /* Поворачиваем картинку на 90 градусов */
+  transform-origin: center; /* Задаем точку вращения (центр картинки) */
 }
 
 ul {
