@@ -435,7 +435,7 @@ input[type="radio"]:hover + label {
   align-items: center; /* Выравнивание по вертикали */
   border: 3px solid #caac77; /* Рамка вокруг контейнера */
   background-color: #f9f6f2; /* Фоновый цвет */
-  padding: 20px; /* Внутренние отступы */
+  padding: 10px; /* Внутренние отступы */
   margin: 20px auto; /* Отступы сверху/снизу и центрирование */
   max-width: 800px; /* Максимальная ширина контейнера */
   border-radius: 10px; /* Скругление углов */
@@ -446,6 +446,7 @@ input[type="radio"]:hover + label {
   max-width: 40%; /* Ограничиваем ширину картинки (40% от контейнера) */
   height: auto; /* Сохраняем пропорции */
   transform-origin: center; /* Точка вращения в центре */
+  border-radius: 10px; /* Скругляем углы */
 }
 
 ul {
