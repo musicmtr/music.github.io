@@ -431,20 +431,19 @@ input[type="radio"]:hover + label {
 
 /* Стили для картинки */
 .dress-container {
-  display: flex; /* Используем flexbox для центрирования */
-  justify-content: center; /* Центрируем по горизонтали */
-  align-items: center; /* Центрируем по вертикали */
+  display: flex; /* Горизонтальное расположение элементов */
+  align-items: center; /* Выравнивание по вертикали */
   border: 3px solid #caac77; /* Рамка вокруг контейнера */
   background-color: #f9f6f2; /* Фоновый цвет */
   padding: 20px; /* Внутренние отступы */
   margin: 20px auto; /* Отступы сверху/снизу и центрирование */
-  max-width: 500px; /* Максимальная ширина контейнера */
+  max-width: 800px; /* Максимальная ширина контейнера */
   border-radius: 10px; /* Скругление углов */
   box-sizing: border-box; /* Учитываем padding и border в ширине */
 }
 
 .dress {
-  max-width: 100%; /* Ограничиваем ширину картинки */
+  max-width: 40%; /* Ограничиваем ширину картинки (40% от контейнера) */
   height: auto; /* Сохраняем пропорции */
   transform-origin: center; /* Точка вращения в центре */
 }
