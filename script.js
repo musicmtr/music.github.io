@@ -166,4 +166,57 @@ document.addEventListener('DOMContentLoaded', () => {
         // Сбросить форму
         form.reset();
     });
+
+    // Это уже кнопка отправить в телеграмм
+    document.getElementById('guest-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвращаем стандартную отправку формы
+
+            // Получаем значения из полей формы
+    const name = document.getElementById('name').value;
+    const plusName = document.getElementById('plus-name').value;
+
+    // Проверяем, заполнены ли поля
+    if (!name && !plusName) {
+        alert('Пожалуйста, заполните хотя бы одно поле.');
+        return;
+    }
+
+    // Формируем сообщение для Telegram
+    const message = `
+        📋 Новый ответ на форму:
+        👤 ФИО: ${name || 'Не указано'}
+        ➕ Гости: ${plusName || 'Не указано'}
+    `;
+
+    // Настройки для запроса к Telegram Bot API
+    const botToken = '8012548911:AAGRU2C6MreFxHPcvX9ixzkhl40chkVlg-g'; // Замените на ваш токен
+    const chatId = '429651615'; // Замените на ваш chat_id
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+    // Отправляем данные через fetch
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: chatId,
+            text: message
+        })
+    })
+
+    .then(response => {
+        if (response.ok) {
+            alert('Спасибо! Ваш ответ успешно отправлен.');
+            document.getElementById('guest-form').reset(); // Очищаем форму
+        } else {
+            alert('Произошла ошибка при отправке. Попробуйте позже.');
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Произошла ошибка при отправке. Попробуйте позже.');
+    });
+});
+
 });
