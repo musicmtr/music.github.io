@@ -448,6 +448,7 @@ input[type="radio"]:hover + label {
   height: auto; /* Сохраняем пропорции */
   transform-origin: center; /* Точка вращения в центре */
   border-radius: 10px; /* Скругляем углы */
+  margin: 0 auto;
 }
 
 ul {
