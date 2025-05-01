@@ -14,6 +14,47 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+            // 2. Добавление полей через кнопку "Плюс еще"
+        const guestFieldsContainer = document.getElementById('guest-fields');
+        const addGuestButton = document.getElementById('add-guest');
+
+        // Функция для создания нового поля ввода
+        function createNewInput() {
+            const newFieldWrapper = document.createElement('div');
+            newFieldWrapper.classList.add('guest-field');
+
+            const newInput = document.createElement('input');
+            newInput.type = 'text';
+            newInput.name = 'plus-name';
+            newInput.placeholder = 'ФИО дополнительного гостя';
+
+            const removeButton = document.createElement('button');
+            removeButton.classList.add('remove-btn');
+            removeButton.textContent = 'Удалить';
+
+            // Добавляем обработчик для кнопки удаления
+            removeButton.addEventListener('click', function () {
+                guestFieldsContainer.removeChild(newFieldWrapper);
+            });
+
+            newFieldWrapper.appendChild(newInput);
+            newFieldWrapper.appendChild(removeButton);
+
+            return newFieldWrapper;
+        }
+
+        // Обработчик для кнопки "Плюс еще"
+        addGuestButton.addEventListener('click', function () {
+            const maxInputs = 10; // Ограничение на количество полей
+            const currentFields = guestFieldsContainer.querySelectorAll('.guest-field');
+
+            if (currentFields.length < maxInputs) {
+                const newField = createNewInput();
+                guestFieldsContainer.appendChild(newField);
+            } else {
+                alert('Достигнуто максимальное количество полей.');
+            }
+
         const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));

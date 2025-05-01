@@ -76,13 +76,14 @@
             <h2>Анкета гостя</h2>
             <form id="guest-form">
                 <h3 class="countdown-text2 fade-in"><p>Планируете ли Вы присутствовать на свадьбе?</p>
-                <h3 class="countdown-text2 fade-in"><p><br>Заполните Ваши ФИО если «ДА»:</p>
+                <h3 class="countdown-text2 fade-in"><p><br>Заполните Ваши ФИО если «ДА»:</p><br>
                 <input type="text" id="name" name="name" required>
-                <div>
-                    <input type="radio" id="attend-plus" name="attendance" value="Буду с плюс">
-                    <label for="attend-plus">Буду с плюс</label>
+                <div id="guest-fields">
+                    <label for="attend-plus">Буду с плюс</label><br>
                     <input type="text" id="plus-name" name="plus-name" placeholder="ФИО дополнительного гостя"> <br>
+                    <button class="remove-btn" style="display: none;">Удалить</button>
                 </div>
+                <button id="add-guest">Плюс еще</button>
                 <button type="submit">Отправить</button>
             </form>
         </section>

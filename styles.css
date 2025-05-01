@@ -93,6 +93,50 @@ strong {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+#guest-fields {
+  margin-bottom: 10px;
+}
+
+.guest-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.guest-field input {
+  padding: 8px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.remove-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.remove-btn:hover {
+  background-color: #cc0000;
+}
+
+#add-guest {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#add-guest:hover {
+  background-color: #45a049;
+}
+
 /* Заголовки */
 h1, h2 {
   font-family: "Poiret One", cursive; /* Акцентный шрифт Poiret One */
