@@ -106,21 +106,6 @@ strong {
   transition: opacity 0.3s ease, transform 0.3s ease; /* Плавный переход */
 }
 
-/* Стили для кнопки "Удалить" */
-.remove-btn {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #8a7070;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.remove-btn:hover {
-  background-color: #cc0000;
-}
-
 /* Активное состояние поля */
 .guest-field.active {
   opacity: 1; /* Полная видимость */
