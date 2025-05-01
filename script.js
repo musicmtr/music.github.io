@@ -1,4 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Кнопки анкеты
+    const guestFieldsContainer = document.getElementById('guest-fields');
+    const addGuestButton = document.getElementById('add-guest');
+    
+    // Функция для создания нового поля ввода
+    function createNewInput() {
+        const newFieldWrapper = document.createElement('div');
+        newFieldWrapper.classList.add('guest-field');
+
+        const newInput = document.createElement('input');
+        newInput.type = 'text';
+        newInput.name = 'plus-name';
+        newInput.placeholder = 'ФИО дополнительного гостя';
+
+        const removeButton = document.createElement('button');
+        removeButton.classList.add('remove-btn');
+        removeButton.textContent = 'Удалить';
+        removeButton.style.display = 'inline-block'; // Показываем кнопку удаления
+
+        // Добавляем обработчик для кнопки удаления
+        removeButton.addEventListener('click', function () {
+            guestFieldsContainer.removeChild(newFieldWrapper);
+        });
+
+        newFieldWrapper.appendChild(newInput);
+        newFieldWrapper.appendChild(removeButton);
+
+        return newFieldWrapper;
+    }
+
+    // Обработчик для кнопки "Плюс еще"
+    addGuestButton.addEventListener('click', function () {
+        const newField = createNewInput();
+        guestFieldsContainer.appendChild(newField);
+    });
+    
+    // Ограничение по гостям
+    const maxInputs = 10;
+
+    addGuestButton.addEventListener('click', function () {
+        const currentFields = guestFieldsContainer.querySelectorAll('.guest-field');
+        if (currentFields.length < maxInputs) {
+            const newField = createNewInput();
+            guestFieldsContainer.appendChild(newField);
+        } else {
+            alert('Достигнуто максимальное количество полей.');
+        }
+    });
+
+    // Незя удалить кнопку если поле одно
+        const firstField = guestFieldsContainer.querySelector('.guest-field');
+    if (firstField) {
+        const removeButton = firstField.querySelector('.remove-btn');
+        if (removeButton) {
+            removeButton.style.display = 'none';
+        }
+    }
+
     // Таймер обратного отсчета
     const weddingDate = new Date("July 11, 2025 10:00:00").getTime();
     const countdownTimer = setInterval(() => {
