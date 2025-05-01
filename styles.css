@@ -422,11 +422,12 @@ input[type="radio"]:hover + label {
   margin-bottom: 20px;
 }
 
-/* Картинка для дресскода*/
-.text-and-image {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Расстояние между текстом и картинкой */
+/* Стили для картинки дресскода*/
+.dress {
+  max-width: 100%; /* Ограничиваем ширину картинки */
+  height: auto; /* Сохраняем пропорции */
+  transform: rotate(90deg); /* Поворачиваем картинку на 90 градусов */
+  transform-origin: center; /* Задаем точку вращения (центр картинки) */
 }
 
 ul {
