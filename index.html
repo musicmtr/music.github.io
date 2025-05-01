@@ -75,26 +75,14 @@
         <section class="section form-section">
             <h2>Анкета гостя</h2>
             <form id="guest-form">
-                <h3 class="countdown-text2 fade-in"><p><br>Ваши ФИО:</p>
-                <input type="text" id="name" name="name" required>
-                
                 <h3 class="countdown-text2 fade-in"><p>Планируете ли Вы присутствовать на свадьбе?</p>
-                <div>
-                    <input type="radio" id="attend-yes" name="attendance" value="Обязательно приду" required>
-                    <label for="attend-yes">Обязательно приду</label>
-                </div>
+                <h3 class="countdown-text2 fade-in"><p><br>Заполните Ваши ФИО если «ДА»:</p>
+                <input type="text" id="name" name="name" required>
                 <div>
                     <input type="radio" id="attend-plus" name="attendance" value="Буду с плюс">
                     <label for="attend-plus">Буду с плюс</label>
-                    <input type="text" id="plus-name" name="plus-name" placeholder="ФИО дополнительного гостя">
-                    <input type="checkbox" id="plus-child" name="plus-child">
-                    <label for="plus-child">Ребенок</label>
+                    <input type="text" id="plus-name" name="plus-name" placeholder="ФИО дополнительного гостя"> <br>
                 </div>
-                <div>
-                    <input type="radio" id="attend-no" name="attendance" value="Не смогу присутствовать">
-                    <label for="attend-no">Не смогу присутствовать</label>
-                </div>
-
                 <button type="submit">Отправить</button>
             </form>
         </section>
