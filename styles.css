@@ -434,7 +434,7 @@ input[type="radio"]:hover + label {
 .dress-container {
   display: flex; /* Горизонтальное расположение элементов */
   align-items: center; /* Выравнивание по вертикали */
-  border: 3px solid #caac77; /* Рамка вокруг контейнера */
+  border: 2px solid #cbae79; /* Рамка вокруг контейнера */
   background-color: #f9f6f2; /* Фоновый цвет */
   padding: 10px; /* Внутренние отступы */
   margin: 20px auto; /* Отступы сверху/снизу и центрирование */
