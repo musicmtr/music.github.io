@@ -1,30 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Таймер обратного отсчета
-    function startCountdown(elementId) {
-        const weddingDate = new Date("July 11, 2025 10:00:00").getTime();
-        const countdownElement = document.getElementById(elementId);
-    
-        // Обновляем каждую секунду
-        setInterval(() => {
-            const now = new Date().getTime();
-            const timeLeft = weddingDate - now;
-    
-            if (timeLeft <= 0) {
-                countdownElement.innerHTML = "Сегодня день свадьбы! 🎉";
-                return;
-            }
-    
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    
-            countdownElement.innerHTML = `${days} дней ${hours} часов ${minutes} минут`;
-        }, 1000);
-    }
+    const weddingDate = new Date("July 11, 2025 10:00:00").getTime();
 
-    // Запуск двух таймеров
-    startCountdown('countdown');
-    startCountdown('countdown-2');
+    function updateTimers() {
+        const now = new Date().getTime();
+        const timeLeft = weddingDate - now;
+    
+        const timers = document.querySelectorAll('.countdown-output');
+    
+        if (timeLeft <= 0) {
+            timers.forEach(timer => {
+                timer.textContent = 'Сегодня день свадьбы! 🎉';
+            });
+            return;
+        }
+    
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    
+        timers.forEach(timer => {
+            timer.textContent = `${days} дней ${hours} часов ${minutes} минут`;
+        });
+    }
+    
+    // Обновление каждую секунду
+    setInterval(updateTimers, 1000);
+    updateTimers(); // Первичный вызов
 
     // Анимация появления текста
     let lastScrollPosition = 0;
