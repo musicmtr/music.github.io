@@ -420,9 +420,6 @@ input[type="radio"]:hover + label {
 /* Стили для контейнера логотипа */
 .logo-container {
   position: relative;
-  display: inline-block;
-  margin: 6px 0;
-  margin-bottom: 20px;
 }
 
 .location-link {
