@@ -201,6 +201,8 @@ button:hover {
   font-weight: bold;
   width: auto; /* Динамическая ширина */
   margin: 0 auto; /* Центрирует блок */
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Текст "До свадьбы осталось:" */
