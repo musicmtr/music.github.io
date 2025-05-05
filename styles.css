@@ -446,7 +446,7 @@ input[type="radio"]:hover + label {
   align-items: center; /* Выравнивание по вертикали */
   border: 2px solid #cbae79; /* Рамка вокруг контейнера */
   background-color: #f9f6f2; /* Фоновый цвет */
-  padding: 10px; /* Внутренние отступы */
+  padding: 0px; /* Внутренние отступы */
   margin: 20px auto; /* Отступы сверху/снизу и центрирование */
   max-width: 800px; /* Максимальная ширина контейнера */
   border-radius: 10px; /* Скругление углов */
@@ -581,5 +581,12 @@ li {
     height: auto; /* Сохраняем пропорции */
     margin: 0px; /* Настройте по необходимости */
     transform: scale(0.8); /* Уменьшает изображение до 50% от исходного размера */
+  }
+}
+
+@media (min-width: 769px) {
+  .dress-container {
+    width: 90%; /* Занимает 90% от родителя или viewport */
+    max-width: 1000px; /* Ограничиваем до нужного максимума */
   }
 }
